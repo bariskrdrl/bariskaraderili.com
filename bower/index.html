@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html lang="tr">
+
+  <head>
+
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="Baris Karaderili Resmi Web Sitesi">
+
+    <meta name="keywords" content="baris, karaderili, baris karaderili, barisk, bariskrdrl, devbarisk">
+
+    <meta name="author" content="Baris Karaderili - info@bariskaraderili.com">
+
+    <title>Baris Karaderili - Kus Uctu(Bower Mavis)</title>
+
+    <style media="screen">
+
+      html { font-family: 'Tahoma'; }
+
+    </style>
+
+  </head>
+
+  <body>
+
+    <header>
+      <img src="../images/bower/bower-logo.svg" width="100" alt="bower web paket yoneticisi" />
+      <h1>Bower - Web Paket Yoneticisi(Nedir Bu Kus?)</h1>
+      <p>Kullandigimiz kutuphaneleri kolay bir sekilde yonetmemize yarayan bir paket yoneticisidir.</p>
+    </header>
+
+    <main>
+      <section>
+        <h3>Boyle soylediklerinde kafamda hic bir sey canlanmamisti.Buna ne dersin?</h3>
+        <p>Simdi gidip bootstrap indiriyorsunya sonra da jQuery indiriyosun sonra gidip bir tanede sekilli slider kutuphanesi sonra da bir tane fancybox sonra da da da da.. iste</p>
+        <p>Simdi bu kadar seyi indirdin gidip tek tek sitelerine ugradin aldin kendi projene klasor olusturup koydun bunlari.</p>
+        <p>Bower sayesinde boyle gidip tek tek bunlari indir sonra al projene ekleyle ugrasmayacan.</p>
+        <p><strong>bower install bootstrap</strong> bu gidecek simdi bootstraopi indirecek sonrada diyecekki ya bootstrap jQuery kullanman lazim kardesim.</p>
+        <p>Ben sahibimi ugrastirmiyayim senin bagli oldugun kutuphaneyide sahibime hediye edeyim diyecek.</p>
+        <p>Simdi fancybox indireceksin yaz hemen <strong>bower install fancbox</strong> bakacak bizim kus diyecekki patron buda jQuery istiyor.</p>
+        <p>Kus akilli ben diyim.Ben gecen gun bootstrap indirirken jQuery indirdim tekrar indirmeme gerek yok sahibim onu kullanir.<strong>(Helal olsun lan sana mavis)</strong></p>
+      </section>
+      <section>
+        <h3>Nasil Kullanicam?</h3>
+        <p>Oncelikle bower kullanmak icin nodejs kurmaliyiz.<a href="https://nodejs.org/en/">burdan indirebilirsin</a></p>
+        <p>Bower nodejs ile yazildigi icin nodejs paket yoneticlerine ihtiyacimiz var ve bu paket sayesinde bower i kuracagiz.<strong>Paket yonetcisini paket yoneticisinden indiriyoruz :)</strong></p>
+        <p>nodejs kurdugunuzda otomatik olarak npm<em>(nodejs package manager)</em> kurulur.</p>
+        <p>Komut istemi, terminal artik adina ne dersen ac onu yaz oraya <mark>$ npm install -g bower</mark> global olarak bower kurulucak senin bilgisayarani.</p>
+        <p>Kuruldukdan sonra terminalden projeni olusturacagin dosya konumuna git.</p>
+        <p><mark>bower search jquery</mark> asil enter a sana github uzerindeki adinda jquery yazan kutuphaneleri listeleyecek.</p>
+        <p>Ordan hangisini istiyorsan sec begen <mark>bower install jquery</mark> simdi jquery senin dosyana inmeyecek :D</p>
+        <p>Kus diyecekki patron ben bunu nasil indireyim git mit bir sey yok mu onu kur :)</p>
+        <p>Kur git ide cekinme sonrasinda mutlu olacaksin.</p>
+        <p>jQuery senin projene <mark>bower_components/</mark> bu klasor icerisine gelecek.</p>
+        <p>Bu sekilde istedigin kadar kutuphaneyi hatta direk bir siteden url yazarak bir css,js dosyasini bile indirebilirsin.<mark>$ bower install http://example.com/script.js</mark></p>
+      </section>
+      <section>
+        <h3>Biraz degistirelim</h3>
+        <p>Simdi en basa donduk nodejs kurdun.npm yaninda hediye olarak geldi.git ide gittin indirdin xD</p>
+        <p><strong>$ npm install -g bower</strong></p>
+        <p><strong>bower init</strong> cikanlara bir seyler yazmak istersen yaz ben genelde enter yapiyom hepsine (:</p>
+        <p><strong>$ bower install jquery --save</strong></p>
+        <p>Simdi bower uzerinden indirdigin herseyi init yaptigin icin bower.json dosyasina kaydedecek.</p>
+        <p>Kaydedince ne olacak?</p>
+        <p><strong>bower install</strong> dedigin anda json dosyasindaki kayitli her kutuphaneyi indirecek.Bir nevi kayit altina alacaksin herseyi.</p>
+      </section>
+      <section>
+        <h3>Kardesim kusmusun nesin benim kutuphaneleri <mark>library</mark> diye bir klasore koy ben oyle <strong>bower_components/</strong> bilmem diyebilirsin.</h3>
+        <p><em>Usta yaparim paketci</em></p>
+        <p><mark>.bowerrc</mark> diye bir dosya olustur projenin oldugu dizine.</p>
+        <p>
+          <pre>
+            {
+              "directory" : "library",
+              "json"      : "bower.json"
+            }
+          </pre>
+        </p>
+        <p>Bunu yaz kaydet.Simdi <strong>$ bower install jquery --save</strong> yazdiginda artik library klasorunun icerisine istedigin kutuphaneyi indirebilirsin.</p>
+        <p><strong>Not: </strong>komut dizinine belirttigim kodlari yazarken $ lari koyma :) He birde yanlis gordugun nokta varsa <a href="mailto:karaderili.baris@gmail.com">karaderili.baris</a> mail salla :)</p>
+      </section>
+    </main>
+
+    <footer>
+      <h1>Az kalsin unutuyordum.</h1>
+      <h3>Bu kus mavis felan degil :)</h3>
+      <a href="../blog.html">Diger Yazilar</a>    
+    </footer>
+
+  </body>
+
+</html>

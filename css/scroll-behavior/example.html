@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+<html lang="tr">
+
+<head>
+
+	<meta charset="utf-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta name="description" content="Baris Karaderili Resmi Web Sitesi">
+
+	<meta name="keywords" content="baris, karaderili, baris karaderili, barisk, bariskrdrl, devbarisk">
+
+	<meta name="author" content="Baris Karaderili - info@bariskaraderili.com">
+
+	<title>Baris Karaderili - Scroll Behavior</title>
+
+	<style media="screen">
+
+		html { font-family: 'Tahoma'; }
+
+		body {
+		  overflow: hidden;
+      padding: 0px;
+      margin: 0px;
+    }
+
+		.example header {
+			position: -webkit-sticky;
+			position: sticky;
+			top: 0px;
+			width: 100%;
+			text-align: center;
+			background-color: purple;
+			height: 100px;
+			line-height: 100px;
+		}
+
+		.example header ul {
+			padding: 0px;
+      margin: 0px;
+			list-style: none;
+		}
+
+		.example header ul li { display: inline-block; }
+
+		.example header ul li a {
+			padding: 0px 20px;
+			text-decoration: none;
+			color: white;
+		}
+
+		.example main {
+			scroll-behavior: smooth;
+			overflow: auto;
+			height: 100vh;
+		}
+
+		.example main section {
+			height: 100vh;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.example main section h1 {
+			margin: 0px;
+			color: white;
+		}
+
+		.example > main #home { background-color: red; }
+
+		.example > main #about { background-color: yellow; }
+
+		.example > main #services { background-color: green; }
+
+		.example > main #contact { background-color: blue; }
+
+	</style>
+
+</head>
+
+<body>
+
+	<main>
+
+		<section class="example">
+
+			<main>
+
+				<header>
+
+					<nav>
+
+						<ul>
+
+							<li><a href="#home">HOME</a></li>
+							<li><a href="#about">ABOUT</a></li>
+							<li><a href="#services">SERVICES</a></li>
+							<li><a href="#contact">CONTACT</a></li>
+
+						</ul>
+
+					</nav>
+
+				</header>
+
+				<section id="home">
+
+					<h1>HOME</h1>
+
+				</section>
+
+				<section id="about">
+
+					<h1>ABOUT</h1>
+
+				</section>
+
+				<section id="services">
+
+					<h1>SERVICES</h1>
+
+				</section>
+
+				<section id="contact">
+
+					<h1>CONTACT</h1>
+
+				</section>
+
+			</main>
+
+		</section>
+
+	</main>
+
+</body>
+
+</html>

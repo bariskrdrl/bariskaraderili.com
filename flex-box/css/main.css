@@ -1,0 +1,62 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html { font-family: 'Tahoma'; }
+
+body {
+  padding: 2%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+body > div { width: 45%; }
+
+ul { list-style: decimal; }
+
+p,
+li { margin-bottom: 20px; }
+
+section {
+  padding: 10px;
+  border: 1px solid #333333;
+  min-height: 500px;
+}
+
+section > div {
+  width: 100px;
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+}
+
+select {
+  height: 30px;
+  margin-top: 10%;
+}
+
+option[value='seciniz']{ display: none; }
+
+.control {
+  margin: 0% 1% 1% 0%;
+  display: inline-block;
+}
+
+.title { margin-bottom: 2%; }
+
+.blue { background-color: blue;}
+
+.red { background-color: red; }
+
+.purple { background-color: purple; }
+
+.orange { background-color: orange; }
+
+.yellow { background-color: yellow; }
+
+footer { width: 100%; }

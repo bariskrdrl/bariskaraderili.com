@@ -1,0 +1,218 @@
+	<!DOCTYPE html>
+
+	<html lang="tr">
+
+	  <head>
+
+		<meta charset="utf-8">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<meta name="description" content="Baris Karaderili Resmi Web Sitesi">
+
+		<meta name="keywords" content="baris, karaderili, baris karaderili, barisk, bariskrdrl, devbarisk">
+
+		<meta name="author" content="Baris Karaderili - info@bariskaraderili.com">
+
+		<title>Baris Karaderili - Background Linear Gradient - Repeating</title>
+
+		<style media="screen">
+
+		  	html { font-family: 'Tahoma'; }
+
+			.b { display: block; }
+
+			.e { color: royalblue; }
+
+			.p { color: darkred; }
+
+			.v {
+				color: darkcyan;
+				padding-left: 20px;
+			}
+
+			.ra {
+				width: 100%;
+				height: 14px;
+				max-width: 1260px;
+				background: repeating-linear-gradient(
+				  to left,
+				  #0077C0,
+				  #0077C0 14px,
+				  #832990 14px,
+				  #832990 28px,
+				  #ED145B 28px,
+				  #ED145B 42px,
+				  #F68B1F 42px,
+				  #F68B1F 56px,
+				  #C5E5F9 56px,
+				  #C5E5F9 70px,
+				  #FFFFFF 70px,
+				  #FFFFFF 84px,
+				  #FDBD34 84px,
+				  #FDBD34 98px,
+				  #ED1C24 98px,
+				  #ED1C24 112px,
+				  #47B749 112px,
+				  #47B749 126px
+				);
+			}
+
+			.rb,
+			.rc {
+				color: white;
+				padding: 10% 0%;
+				box-sizing: border-box;
+			}
+
+			.rb div,
+			.rc div {
+				max-width: 960px;
+				margin: 0px auto;
+			}
+
+			.rb {
+				height: 552px;
+				background: linear-gradient(
+				  -4deg,
+				  #EFC614 0%,
+				  #EFC614 80%,
+				  transparent 80%,
+				  transparent 100%
+				);
+				position: relative;
+				z-index: 2;
+			}
+
+			.rc {
+				height: 700px;
+				background: #05A9BE;
+				position: relative;
+				z-index: 1;
+			}
+
+			.rm {
+				margin-top: -20%;
+				background: linear-gradient(
+				  4deg,
+				  #EFC614 0%,
+				  #EFC614 80%,
+				  transparent 80%,
+				  transparent 100%
+				);
+			}
+
+		</style>
+
+	  </head>
+
+	  <body>
+
+		<header>
+
+		  <h1>Background Gradient ve Repeating Ile Yapilmayanlar</h1>
+
+		  <p>Sımdi web sitelerinde background gradient ile yapilabilecek ancak bunun yerine background-image kullanilan yerleri inceliyecegiz.</p>
+
+		</header>
+
+		<main>
+
+			<section>
+
+				<h3><mark>Ornek: 1</mark></h3>
+
+				<a href="http://www.istek.k12.tr/" target="_blank">http://www.istek.k12.tr/</a>
+
+				<p>Bu siteye girdigimizde hemen header altinda 9 renk grubunun bir birini takip ettigini gorecegiz.Bunu background-image kullanmak yerine su sekilde yapabilirdik.</p>
+
+				<div class="r ra"></div>
+
+				<h4>Ornek Kod:</h4>
+
+				<div>
+					<span class="p">background: </span><span class="e">repeating-linear-gradient(</span>
+					  <span class="v b">to left,</span>
+					  <span class="v b">#0077C0,</span>
+					  <span class="v b">#0077C0 14px,</span>
+					  <span class="v b">#832990 14px,</span>
+					  <span class="v b">#832990 28px,</span>
+					  <span class="v b">#ED145B 28px,</span>
+					  <span class="v b">#ED145B 42px,</span>
+					  <span class="v b">#F68B1F 42px,</span>
+					  <span class="v b">#F68B1F 56px,</span>
+					  <span class="v b">#C5E5F9 56px,</span>
+					  <span class="v b">#C5E5F9 70px,</span>
+					  <span class="v b">#FFFFFF 70px,</span>
+					  <span class="v b">#FFFFFF 84px,</span>
+					  <span class="v b">#FDBD34 84px,</span>
+					  <span class="v b">#FDBD34 98px,</span>
+					  <span class="v b">#ED1C24 98px,</span>
+					  <span class="v b">#ED1C24 112px,</span>
+					  <span class="v b">#47B749 112px,</span>
+					  <span class="v b">#47B749 126px</span>
+					<span class="p b">);</span>
+				</div>
+
+			</section>
+
+			<section>
+
+				<h3><mark>Ornek: 2</mark></h3>
+
+				<a href="http://www.ufkayolculuk.com/" target="_blank">http://www.ufkayolculuk.com/</a>
+
+				<p><a href="http://www.ufkayolculuk.com/mp-include/themes/ufkayolculuk/images/footer.png" target="_blank">http://www.ufkayolculuk.com/mp-include/themes/ufkayolculuk/images/footer.png</a></p>
+
+				<p>Bu sitede de gorebileceginiz gibi background da bir cok yer yamuk yumuk oldugu icin background image kullanilmis.</p>
+				<p>Bunun yerine background gradient in direction ozelligi ile - + dereceler verilerek ayni sonucu yakalamak mumkun.</p>
+
+				<div class="rb">
+					<div>
+						<h3>Icerik</h3>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+					</div>
+				</div>
+				<div class="rc">
+					<div>
+						<h3>Icerik</h3>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+					</div>
+				</div>
+				<div class="rb rm">
+					<div>
+						<h3>Icerik</h3>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+					</div>
+				</div>
+
+				<h4>Ornek Kod:</h4>
+
+				<div>
+					<span class="p">background: </span><span class="e">linear-gradient(</span>
+					  <span class="v b">4deg,</span>
+					  <span class="v b">#EFC614 0%,</span>
+					  <span class="v b">#EFC614 80%,</span>
+					  <span class="v b">transparent 80%,</span>
+					  <span class="v b">transparent 100%</span>
+					<span class="p b">);</span>
+				</div>
+
+			</section>
+
+			<section>
+
+				<h3><mark>Sonuc:</mark></h3>
+				<p><strong>Allahin verdigi nimetleri kullanin.</strong></p>
+
+			</section>
+
+		</main>
+
+		<footer>
+		  <a href="../../blog.html">Diger Yazilar</a>
+		</footer>
+
+	  </body>
+
+	</html>

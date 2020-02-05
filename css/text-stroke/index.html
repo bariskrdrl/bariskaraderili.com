@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html lang="tr">
+
+	<head>
+
+		<meta charset="utf-8">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<meta name="description" content="Baris Karaderili Resmi Web Sitesi">
+
+		<meta name="keywords" content="baris, karaderili, baris karaderili, barisk, bariskrdrl, devbarisk">
+
+		<meta name="author" content="Baris Karaderili - info@bariskaraderili.com">
+
+		<title>Baris Karaderili - Text Stroke</title>
+
+		<style media="screen">
+
+			html { font-family: 'Tahoma'; }
+
+			.e { color: royalblue; }
+
+			.p { color: darkred; }
+
+			.b { display: block; }
+
+			.t { padding-left: 20px; }
+
+      .text-stroke,
+      .text-shadow,
+			.text-data {
+        font-size: 8vw;
+        color: white;
+				margin: 10px 0px;
+				position: relative;
+      }
+
+      .text-stroke { -webkit-text-stroke: 3px red; }
+
+      .text-shadow {
+        text-shadow:
+					-3px -3px 0 red,
+					1px -3px 0 red,
+					-3px 3px 0 red,
+					3px 3px 0 red;
+      }
+
+		</style>
+
+	</head>
+
+	<body>
+
+		<header>
+
+			<h1>Text Stroke</h1>
+
+		</header>
+
+		<main>
+
+			<section>
+
+				<p><strong>Kol gibi kalinliga kadar boy boy stroke!</strong></p>
+
+				<p>Cokca ihtiyacimiz olan ancak nedense bir turlu tarayicilar tarafindan destek verilmeyen kimsenin sallamadigi <strong>gariban stroke</strong></p>
+
+				<h3>Nasil Ihtiyac Duyduk</h3>
+
+        <p>Photoshopda tasarim yapan bir almanin aklina bir fikir gelir ve iste bunu yapmaliyim diyerek yazinin etrafina bir cerceve vermek ister.<mark>Basi goge erdi!</mark></p>
+
+				<p><strong>Bir deli kuyuya tas atmis kimse sallamamis!</strong></p>
+
+				<img src="images/logo-oreo.svg" alt="text stroke" />
+
+        <h3>Nasil Oldu</h3>
+
+				<p>Goruldugu gibi cok basit bir sekilde kac px hangi renk verip keyfimize bakiyoruz.</p>
+
+        <h1 class="text-stroke">TEXT STROKE</h1>
+
+				<span class="b"><span class="e">-webkit-text-stroke: </span><span class="p">3px red;</span></span>
+
+				<h3>Nasil Yapiyorduk</h3>
+
+				<p>Text shadow ile 9999 koseden cektirerek tam istedigimiz sonuc olmasada tatmin edici seviyede bir goruntu yakalayabiliyorduk.</p>
+
+        <h1 class="text-shadow">TEXT SHADOW</h1>
+
+        <span class="b"><span class="e">text-shadow:</span></span>
+        <span class="b t"><span class="p">-3px -3px 0 red,</span></span>
+        <span class="b t"><span class="p">1px -3px 0 red,</span></span>
+        <span class="b t"><span class="p">-3px 3px 0 red,</span></span>
+        <span class="b t"><span class="p">3px 3px 0 red;</span></span>
+        <span class="b"></span>
+
+				<p><strong>Not: Text sahdow ile verdigim daha sekilli oldu :D</strong></p>
+
+			</section>
+
+		</main>
+
+		<footer>
+
+			<h3><strong>Css le kalin :)</strong></h3>
+
+			<a href="../../blog.html">Diger Yazilar</a>
+
+		</footer>
+
+	</body>
+
+</html>

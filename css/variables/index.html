@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html lang="tr">
+
+	<head>
+
+		<meta charset="utf-8">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<meta name="description" content="Baris Karaderili Resmi Web Sitesi">
+
+		<meta name="keywords" content="baris, karaderili, baris karaderili, barisk, bariskrdrl, devbarisk">
+
+		<meta name="author" content="Baris Karaderili - info@bariskaraderili.com">
+
+		<title>Baris Karaderili - Css Ile Degisken Olusturmak</title>
+
+		<style media="screen">
+
+			html { font-family: 'Tahoma'; }
+
+			.e { color: royalblue; }
+
+			.p { color: darkred; }
+
+			.b { display: block; }
+
+			.t { padding-left: 20px; }
+
+		</style>
+
+	</head>
+
+	<body>
+
+		<header>
+
+			<h1>Css Ile Degisken Olusturmak</h1>
+
+		</header>
+
+		<main>
+
+			<section>
+
+				<p><strong>Gun gecmiyorki bir dinamizim daha yakalanmasin!</strong></p>
+
+				<p>Musteri agladi, sen agladin, w3 yapti! IE desteklemedi!<strong>(Sasirmadik)</strong></p>
+
+				<h3>Variables</h3>
+
+        <p>Aniden degisen renkler, fontlar, font boyutlari, dinamizmi yakalamak icin yaptigin her turlu bok.</p>
+
+        <p>Neyin kafasini yasadigini bilmedigimiz musteri tarafindan aniden degistirilebilir.</p>
+
+        <p>Bu degisikliklerin zulme donusmemesi icin en guzeli bunlari bir degiskene almak ve tek yerden yonetmektir.</p>
+
+        <p>Suanda bunlari yapmamizi saglanyan sass, less, stylus gibi css derleyiciler kullaniyoruz.</p>
+
+        <p><mark>w3 de artik bunu sana sundu.</mark></p>
+
+        <h3>Ornek</h3>
+
+        <span class="b"><span class="e">:root</span> {</span>
+        <span class="b t"><span class="e">--main-color: </span><span class="p">#000000;</span></span>
+        <span class="b t"><span class="e">--title-color: </span><span class="p">#FFFFFF;</span></span>
+        <span class="b t"><span class="e">--main-font: </span><span class="p">'Tahoma';</span></span>
+        <span class="b t"><span class="e">--title-font: </span><span class="p">'Ubuntu';</span></span>
+        <span class="b t"><span class="e">--main-size: </span><span class="p">17px;</span></span>
+        <span class="b t"><span class="e">--title-size: </span><span class="p">26px;</span></span>
+        <span class="b">}</span>
+
+        <span class="b"><span class="e">h1, h2, h3, h4, h5, h6</span> {</span>
+        <span class="b t"><span class="e">color: </span><span class="p">var(--title-color);</span></span>
+        <span class="b t"><span class="e">font-size: </span><span class="p">var(--title-size);</span></span>
+        <span class="b t"><span class="e">font-family: </span><span class="p">var(--title-font);</span></span>
+        <span class="b">}</span>
+
+				<p><strong>Not: </strong>root: secicisi belgenin kok ogesini secer.Burada kok oge html dir.root: icerisine verdiginiz cssler direk html e isleyecektir.Bizde html de degiskenler olusturmus olduk.</p>
+
+			</section>
+
+		</main>
+
+		<footer>
+
+			<h3><strong>Degiskenin degiskenini degistiremezsin. :)</strong></h3>
+
+			<a href="../../blog.html">Diger Yazilar</a>
+
+		</footer>
+
+	</body>
+
+</html>

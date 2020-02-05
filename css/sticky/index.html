@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<html lang="tr">
+
+<head>
+
+	<meta charset="utf-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta name="description" content="Baris Karaderili Resmi Web Sitesi">
+
+	<meta name="keywords" content="baris, karaderili, baris karaderili, barisk, bariskrdrl, devbarisk">
+
+	<meta name="author" content="Baris Karaderili - info@bariskaraderili.com">
+
+	<title>Baris Karaderili - Sticky</title>
+
+	<style media="screen">
+		html {
+			font-family: 'Tahoma';
+		}
+
+		body {
+			min-height: 400vh;
+		}
+
+		.e {
+			color: royalblue;
+		}
+
+		.p {
+			color: darkred;
+		}
+
+		dl dt {
+			position: -webkit-sticky;
+			position: sticky;
+			top: 0px;
+			background-color: antiquewhite;
+		}
+
+		.sticky {
+			background-color: aquamarine;
+			width: 200px;
+			height: 200px;
+			position: -webkit-sticky;
+			position: sticky;
+			top: 50px;
+		}
+	</style>
+
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Position Sticky Nasil Kullanilir?</h1>
+		<p><strong>Bu lanet olasi ozellik webkit ve gecko tabanli tarayicilarda destek gormektedir.</strong></p>
+		<p>Mobilde sadece Firefox desteklemektedir.Buda ayri bir dert!<mark><strong>(Forever Firefox)</strong></mark></p>
+		<p><small>Safari de guya webkit ama ie den farki yok.Mac imiz olmadigindan deneyemedik. :)</small></p>
+	</header>
+
+	<main>
+		<p>Oncelikle ornegimizi inceleyelim ve gorevinin ne oldugunu anlayalim.</p>
+		<h3>Ornek:</h3>
+		<dl>
+			<div>
+				<dt>A</dt>
+				<dd>Andrew W.K.</dd>
+				<dd>Apparat</dd>
+				<dd>Arcade Fire</dd>
+				<dd>At The Drive-In</dd>
+				<dd>Aziz Ansari</dd>
+			</div>
+			<div>
+				<dt>C</dt>
+				<dd>Chromeo</dd>
+				<dd>Common</dd>
+				<dd>Converge</dd>
+				<dd>Crystal Castles</dd>
+				<dd>Cursive</dd>
+			</div>
+			<div>
+				<dt>E</dt>
+				<dd>Explosions In The Sky</dd>
+			</div>
+			<div>
+				<dt>T</dt>
+				<dd>Ted Leo &amp; The Pharmacists</dd>
+				<dd>T-Pain</dd>
+				<dd>Thrice</dd>
+				<dd>TV On The Radio</dd>
+				<dd>Two Gallants</dd>
+			</div>
+		</dl>
+
+		<h3>Ornek:</h3>
+
+		<div class="sticky">
+
+		</div>
+
+		<h3>Ornek Kullanimi:</h3>
+		<div><span class="e">position:</span> <span class="p">-webkit-sticky;</span></div>
+		<div><span class="e">position:</span> <span class="p">sticky;</span></div>
+
+		<p>Gordugunuz gibi position: sticky; window scroll oldugunda bir nesneyi yukariya yapistiriyor.</p>
+		<p>Icerik bittiginde ise artik yapismayi birakiyor.</p>
+		<p>Ve top degeri vererek offset ayarida yapabiliyoruz.</p>
+		<p>Suan da bu islemi biz javascript ile window yapistirmak istedigimiz nesne kadar scroll olunca position fixed ile yapmaktayiz.</p>
+		<p>Adamlar ugrasmayalim diye css e bu ozelligi koymus ustunden gecmis 3-5 yil ancak lanet olasi <strong>tarayicilar</strong> buna chrome da dahil daha yeni destek verdi.</p>
+		<p><mark>Keske herkes Firefox gibi boyle seylere onem gosterse!</mark></p>
+		<section>
+			<h2>Neler Yapilabilir?</h2>
+			<ul>
+				<li>Header Sabitleme</li>
+				<li>Side larda bulunan menu, reklam vb kisimlari sabitleme</li>
+				<li>Ornegimizdeki gibi bir liste uygulamasi</li>
+				<li>Ve musterinin scroll olunca bu burada sabit kalsin dedigi her turlu boku</li>
+			</ul>
+		</section>
+	</main>
+
+	<footer>
+		<a href="../../blog.html">Diger Yazilar</a>
+	</footer>
+
+</body>
+
+</html>

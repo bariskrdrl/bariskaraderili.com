@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+
+<html lang="tr">
+
+	<head>
+
+		<meta charset="utf-8">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<meta name="description" content="Baris Karaderili Resmi Web Sitesi">
+
+		<meta name="keywords" content="baris, karaderili, baris karaderili, barisk, bariskrdrl, devbarisk">
+
+		<meta name="author" content="Baris Karaderili - info@bariskaraderili.com">
+
+		<title>Baris Karaderili - Blend Mode Ile Delirmeceler!</title>
+
+		<style media="screen">
+
+			html { font-family: 'Tahoma'; }
+
+			span { font-size: 17px; }
+
+			dt {
+				margin-bottom: 1rem;
+				font-weight: 600;
+			}
+
+			dl h3 { font-weight: normal; }
+
+			.e { color: royalblue; }
+
+			.p { color: darkred; }
+
+			.b { display: block; }
+
+			.t { padding-left: 20px; }
+
+			.blend-mode dd div {
+				max-width: 600px;
+				height: 222px;
+				width: 100%;
+				background-image: url('images/pokemon-blend.jpg');
+				background-position: center center;
+				background-size: cover;
+				background-color: purple;
+			}
+
+			.normal + dd div { background-blend-mode: normal; }
+
+			.multiply + dd div { background-blend-mode: multiply; }
+
+			.screen + dd div { background-blend-mode: screen; }
+
+			.overlay + dd div { background-blend-mode: overlay; }
+
+			.darken + dd div { background-blend-mode: darken; }
+
+			.lighten + dd div { background-blend-mode: lighten; }
+
+			.color-dodge + dd div { background-blend-mode: color-dodge; }
+
+			.color-burn + dd div { background-blend-mode: color-burn; }
+
+			.color-burn + dd div { background-blend-mode: color-burn; }
+
+			.hard-light + dd div { background-blend-mode: hard-light; }
+
+			.soft-light + dd div { background-blend-mode: soft-light; }
+
+			.difference + dd div { background-blend-mode: difference; }
+
+			.exclusion + dd div { background-blend-mode: exclusion; }
+
+			.hue + dd div { background-blend-mode: hue; }
+
+			.saturation + dd div { background-blend-mode: saturation; }
+
+			.color + dd div { background-blend-mode: color; }
+
+			.luminosity + dd div { background-blend-mode: luminosity; }
+
+			.darken.two + dd div {
+				background-blend-mode: darken, luminosity;
+				background-image: url('images/pokemon-blend.jpg'),
+													url('images/pikachu.png');
+				background-color: transparent;
+			}
+
+			.hard-light.position + dd div {
+				background-blend-mode: hard-light;
+				background-image: url('images/gastly.png'),
+													url('images/gastly.png'),
+													url('images/gastly.png'),
+													url('images/gastly.png');
+				background-position: 0% 0%,
+														 10% 10%,
+														 20% 20%,
+														 30% 30%;
+		    background-size: 50%;
+				background-repeat: no-repeat;
+				background-color: white;
+			}
+
+			.hard-light.animated + dd div {
+				animation: blend 3s infinite;
+			}
+
+			@keyframes blend {
+
+				0% {
+					background-position: 0% 0%,
+															 10% 10%,
+															 20% 20%,
+															 30% 30%;
+				}
+				50% {
+					background-position: 30% 30%,
+															 20% 20%,
+															 10% 10%,
+															 0% 0%;
+				}
+
+				100% {
+					background-position: 0% 0%,
+															 10% 10%,
+															 20% 20%,
+															 30% 30%;
+				}
+
+			}
+
+			.blend-hover {
+				position: relative;
+				max-width: 640px;
+				height: 345px;
+				width: 100%;
+				margin: 15px 0px 15px 40px;
+			}
+
+			.blend-hover div {
+				position: absolute;
+				top: 0px;
+				right: 0px;
+				bottom: 0px;
+				left: 0px;
+				background-image: url('images/ash.jpg');
+				background-size: cover;
+				background-color: pink;
+				transition: opacity 0.5s cubic-bezier(.02,-0.02,.76,0);
+				will-change: opacity;
+			}
+
+			.blend-hover .difference {
+				opacity: 0;
+				background-blend-mode: difference;
+			}
+
+			.blend-hover:hover .difference { opacity: 1; }
+
+			.blend-hover:hover .normal { opacity: 0; }
+
+			.code { margin-left: 40px; }
+
+		</style>
+
+	</head>
+
+	<body>
+
+		<header>
+
+			<h1>Blend Mode Ile Delirmeceler!</h1>
+
+		</header>
+
+		<main>
+
+			<section>
+
+				<p><strong>Bunu tasarimci tarafindan psd elinize gecince cokca gormussunuzdur.Boktan bir resmin uzerine ne oldugu belli olmayan bir renk gecisi ile ikisini bir birine yedirmis.</strong></p>
+
+				<p>Bu tasarimcilar yuzunden w3 ekibi bir mesai yapip photoshopda bulunan bu yedirmeleri bize sundu.<strong>(Yedirmeyen Kalmasin!)</strong></p>
+
+				<p>Simdi bunlari orneklerle gorelim!</p>
+
+				<h3>Ornek:</h3>
+
+				<dl class="blend-mode">
+
+					<dt class="normal">Normal</dt>
+					<dd>
+						<div>
+
+						</div>
+						<h3>
+							<span class="e">background-blend-mode:</span> <span class="p">normal;</span>
+						</h3>
+					</dd>
+
+					<dt class="multiply">Multiply</dt>
+					<dd>
+						<div>
+
+						</div>
+						<h3>
+							<span class="e">background-blend-mode:</span> <span class="p">multiply;</span>
+						</h3>
+					</dd>
+
+					<dt class="screen">Screen</dt>
+					<dd>
+						<div>
+
+						</div>
+						<h3>
+							<span class="e">background-blend-mode:</span> <span class="p">screen;</span>
+						</h3>
+					</dd>
+
+					<dt class="overlay">Overlay</dt>
+					<dd>
+						<div>
+
+						</div>
+						<h3>
+							<span class="e">background-blend-mode:</span> <span class="p">overlay;</span>
+						</h3>
+					</dd>
+
+					<dt class="darken">Darken</dt>
+					<dd>
+						<div>
+
+						</div>
+						<h3>
+							<span class="e">background-blend-mode:</span> <span class="p">darken;</span>
+						</h3>
+					</dd>
+
+					<dt class="lighten">Lighten</dt>
+					<dd>
+						<div>
+
+						</div>
+						<h3>
+							<span class="e">background-blend-mode:</span> <span class="p">lighten;</span>
+						</h3>
+					</dd>
+
+					<dt class="color-dodge">Color Dodge</dt>
+					<dd>
+						<div>
+
+						</div>
+						<h3>
+							<span class="e">background-blend-mode:</span> <span class="p">color-dodge;</span>
+						</h3>
+					</dd>
+
+					<dt class="color-burn">Color Burn</dt>
+					<dd>
+						<div>
+
+						</div>
+						<h3>
+							<span class="e">background-blend-mode:</span> <span class="p">color-burn;</span>
+						</h3>
+					</dd>
+
+					<dt class="hard-light">Hard Light</dt>
+					<dd>
+						<div>
+
+						</div>
+						<h3>
+							<span class="e">background-blend-mode:</span> <span class="p">hard-light;</span>
+						</h3>
+					</dd>
+
+					<dt class="soft-light">Soft Light</dt>
+					<dd>
+						<div>
+
+						</div>
+						<h3>
+							<span class="e">background-blend-mode:</span> <span class="p">soft-light;</span>
+						</h3>
+					</dd>
+
+					<dt class="difference">Difference</dt>
+					<dd>
+						<div>
+
+						</div>
+						<h3>
+							<span class="e">background-blend-mode:</span> <span class="p">difference;</span>
+						</h3>
+					</dd>
+
+					<dt class="exclusion">Exclusion</dt>
+					<dd>
+						<div>
+
+						</div>
+						<h3>
+							<span class="e">background-blend-mode:</span> <span class="p">exclusion;</span>
+						</h3>
+					</dd>
+
+					<dt class="hue">Hue</dt>
+					<dd>
+						<div>
+
+						</div>
+						<h3>
+							<span class="e">background-blend-mode:</span> <span class="p">hue;</span>
+						</h3>
+					</dd>
+
+					<dt class="saturation">Saturation</dt>
+					<dd>
+						<div>
+
+						</div>
+						<h3>
+							<span class="e">background-blend-mode:</span> <span class="p">saturation;</span>
+						</h3>
+					</dd>
+
+					<dt class="color">Color</dt>
+					<dd>
+						<div>
+
+						</div>
+						<h3>
+							<span class="e">background-blend-mode:</span> <span class="p">color;</span>
+						</h3>
+					</dd>
+
+					<dt class="luminosity">Luminosity</dt>
+					<dd>
+						<div>
+
+						</div>
+						<h3>
+							<span class="e">background-blend-mode:</span> <span class="p">luminosity;</span>
+						</h3>
+					</dd>
+
+				</dl>
+
+				<h3>Diyebilirsin?</h3>
+
+				<p>Nerden anliyacagiz hangisini kullanacagimizi kardes.</p>
+
+				<p>Bu ozellikler direk photoshop ozellikleri oldugu icin tasarimda bu boka benzer seyler gordugunde tikla!</p>
+
+				<p>Sag tarafta bu ozelliklerin hangisi kullanildiysa onu gosterecektir.</p>
+
+				<p><b>Not: </b> Photoshop un turkceyse <mark>sictin :)</mark></p>
+
+				<h3>Yapabilirsin?</h3>
+
+				<dl class="blend-mode">
+
+					<dt class="darken">Darken</dt>
+					<dd>
+						<div>
+
+						</div>
+						<h3>
+							<span class="e">background-blend-mode:</span> <span class="p">darken;</span>
+						</h3>
+					</dd>
+
+					<dt class="darken two">Darken & Luminosity</dt>
+					<dd>
+						<div>
+
+						</div>
+						<h3>
+							<span class="e">background-blend-mode:</span> <span class="p">darken, luminosity;</span>
+							<span class="b"><span class="e">background-image:</span> <span class="p">url('images/pokemon-blend.jpg'), url('images/pikachu.png');</span></span>
+						</h3>
+					</dd>
+
+				</dl>
+
+				<p>Burda gordugunuz gibi iki background resmi ve iki blend-mode ozelligi kullandim.Bu sekilde kullanimlarda ilk verdiginiz blend-mode ilk resme ikinciler ise kendi aralarinda eslesirler.</p>
+				<p><strong>Boyle deneme yontemleriyle guzel seyler yakalanabilir!</strong></p>
+
+				<dl class="blend-mode">
+
+					<dt class="hard-light position">hard-light & position</dt>
+					<dd>
+						<div>
+
+						</div>
+						<h3>
+							<span class="e">background-blend-mode:</span> <span class="p">hard-light;</span>
+							<span class="b"><span class="e">background-image:</span> <span class="p">url('images/gastly.png'), url('images/gastly.png'), url('images/gastly.png'), url('images/gastly.png');</span></span>
+							<span class="b"><span class="e">background-position:</span> <span class="p">0% 0%, 10% 10%, 20% 20%, 30% 30%;</span></span>
+						</h3>
+					</dd>
+
+					<dt class="hard-light position animated">hard-light</dt>
+					<dd>
+						<div>
+
+						</div>
+						<h3>
+							<span class="e">background-blend-mode:</span> <span class="p">hard-light;</span>
+							<span class="b"><span class="e">background-image:</span> <span class="p">url('images/gastly.png'), url('images/gastly.png'), url('images/gastly.png'), url('images/gastly.png');</span></span>
+							<span class="b"><span class="e">background-position:</span> <span class="p">0% 0%, 10% 10%, 20% 20%, 30% 30%;</span></span>
+							<span class="b"><span class="e">animation:</span> <span class="p">blend 3s infinite;</span></span>
+						</h3>
+					</dd>
+
+				</dl>
+
+				<dt>blend-mode & hover</dt>
+
+				<div class="blend-hover">
+
+					<div class="normal">
+
+					</div>
+
+					<div class="difference">
+
+					</div>
+
+				</div>
+
+				<div class="code">
+
+					<span class="b">.blend-hover .difference {</span>
+						<span class="b"><span class="e t">opacity:</span> <span class="p">0;</span></span>
+						<span class="b"><span class="e t">background-blend-mode:</span> <span class="p">difference;</span></span>
+					<span class="b">}</span>
+
+					<span class="b">.blend-hover:hover .difference { <span class="e">opacity:</span><span class="p">1;</span> }</span>
+
+					<span class="b">.blend-hover:hover .normal { <span class="e">opacity:</span><span class="p">0;</span> }</span>
+
+				</div>
+
+				<p>Burdaki puf nokta hover oldugunda blend-mode herhangi bir transition gecisi almiyor.Iki versiyonuda absolute ile ust uste koyarak opacity ile oynuyoruz.</p>
+
+			</section>
+
+		</main>
+
+		<footer>
+
+			<h3><strong>Herkes yedirdigine yedirdigini soylesin!</strong></h3>
+
+			<a href="../../blog.html">Diger Yazilar</a>
+
+		</footer>
+
+	</body>
+
+</html>

@@ -1,0 +1,407 @@
+	<!DOCTYPE html>
+
+	<html lang="tr">
+
+	  <head>
+
+		<meta charset="utf-8">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<meta name="description" content="Baris Karaderili Resmi Web Sitesi">
+
+		<meta name="keywords" content="baris, karaderili, baris karaderili, barisk, bariskrdrl, devbarisk">
+
+		<meta name="author" content="Baris Karaderili - info@bariskaraderili.com">
+
+		<title>Baris Karaderili - Background Gradient</title>
+
+		<style media="screen">
+
+			html { font-family: 'Tahoma'; }
+			
+			body {margin: 0px;}
+
+			.b { display: block; }
+
+			.e { color: royalblue; }
+
+			.p { color: darkred; }
+
+			.v {
+				color: darkcyan;
+				padding-left: 20px;
+			}
+
+
+			:root {
+
+				--canvas-height: 100vh;
+				
+				/*
+				 * sky
+				 */
+				
+				--sky-skeleton: linear-gradient(aqua 100%, transparent);
+				--sky-size: 100% 50%;
+				--sky-position: left top;
+				
+				/*
+				 * sea
+				 */
+				
+				--sea-skeleton: linear-gradient(blue 100%, transparent);
+				--sea-size: 100% 50%;
+				--sea-position: left bottom;
+				
+				/*
+				 * sun
+				 */
+				
+				--sun-skeleton: radial-gradient(circle 100px at center, yellow 80%, #F3F360 95%, transparent);
+				--sun-size: 300px 300px;
+				--sun-position: 85% 15%;
+				
+				/*
+				 * mountain
+				 */
+				 
+				--mountain-width : 300px;
+				--mountain-height : 300px;
+				--mountain-size: var(--mountain-width) var(--mountain-height);	
+				--mountain-left-deg: -45deg;
+				--mountain-right-deg: 45deg;	
+				--mountain-skeleton: 
+					brown 0%,
+					brown 50%,
+					transparent 50%,
+					transparent 100%;
+						
+				
+				/*
+				 * mountain left
+				 */
+				
+				--mountain-left: linear-gradient(
+				  var(--mountain-left-deg),
+				  var(--mountain-skeleton)
+				);
+				--mountain-left-position: calc(50% - (var(--mountain-width) / 2)) calc(50% - (var(--mountain-height) / 2));
+				
+				/*
+				 * mountain right
+				 */
+
+				--mountain-right: linear-gradient(
+				  var(--mountain-right-deg),
+				  var(--mountain-skeleton)
+				);
+				--mountain-right-position: calc(50% + (var(--mountain-width) / 2)) calc(50% - (var(--mountain-height) / 2));
+				
+				/*
+				 * ship
+				 */
+
+				--ship-width : 100px;
+				--ship-height : 100px;
+				--ship-size: var(--ship-width) var(--ship-height);
+				--ship-body-size: calc(var(--ship-width) * 2) var(--ship-height);				
+				--ship-head-deg: -135deg;
+				--ship-pupa-deg: 120deg;
+				--ship-x: 150px;	
+				--ship-y: 65%;				
+				--ship-skeleton: 
+					gray 0%,
+					gray 50%,
+					transparent 50%,
+					transparent 100%;
+				--ship-body-skeleton: 
+					gray 100%,
+					transparent 0%;	
+
+				/*
+				 * ship-head
+				 */
+
+				--ship-head: linear-gradient(
+				  var(--ship-head-deg),
+				  var(--ship-skeleton)
+				);
+				--ship-head-position: var(--ship-x) var(--ship-y);
+
+				/*
+				 * ship-body
+				 */
+
+				--ship-body: linear-gradient(
+				  var(--ship-body-skeleton)
+				);
+				--ship-body-position: calc(var(--ship-x) + var(--ship-width)) var(--ship-y);
+
+				/*
+				 * ship-pupa
+				 */
+
+				--ship-pupa: linear-gradient(
+				  var(--ship-pupa-deg),
+				  var(--ship-skeleton)
+				);
+				--ship-pupa-position: calc(var(--ship-x) + (var(--ship-width) * 3)) var(--ship-y);
+
+				/*
+				 * ship-pole
+				 */
+
+				--ship-pole-width : 20px;
+				--ship-pole-height : 180px;
+				--ship-pole-size: var(--ship-pole-width) var(--ship-pole-height);
+				--ship-pole-x: calc(var(--ship-x) + calc(var(--ship-width) * 2));	
+				--ship-pole-y: calc(var(--ship-y) - (calc(var(--ship-pole-height) / 2)));
+				--ship-pole-position: var(--ship-pole-x) var(--ship-pole-y);	
+				--ship-pole-skeleton: 
+					gray 100%,
+					transparent 0%;
+				--ship-pole: linear-gradient(
+				  var(--ship-pole-skeleton)
+				);		
+				
+			}
+			
+			.canvas {
+				
+				height: var(--canvas-height);
+
+				background-image:
+								var(--sun-skeleton),
+								var(--ship-pole),
+								var(--mountain-right),
+								var(--mountain-left),
+								var(--ship-head),
+								var(--ship-body),
+								var(--ship-pupa),
+								var(--sea-skeleton),
+								var(--sky-skeleton);
+								
+				background-position:
+								var(--sun-position),
+								var(--ship-pole-position),
+								var(--mountain-right-position),
+								var(--mountain-left-position),
+								var(--ship-head-position),
+								var(--ship-body-position),
+								var(--ship-pupa-position),							
+								var(--sea-position),
+								var(--sky-position);
+								
+				background-size:
+								var(--sun-size),
+								var(--ship-pole-size),
+								var(--mountain-size),
+								var(--mountain-size),
+								var(--ship-size),
+								var(--ship-body-size),
+								var(--ship-size),
+								var(--sea-size),
+								var(--sky-size);
+								
+				background-repeat: no-repeat;				
+				
+			}
+
+		</style>
+
+	  </head>
+
+	  <body>
+
+		<main>
+
+			<section>
+
+				<div class="canvas"></div>
+
+				<code>	
+					<pre>
+						:root {
+
+							--canvas-height: 100vh;
+							
+							/*
+							 * sky
+							 */
+							
+							--sky-skeleton: linear-gradient(aqua 100%, transparent);
+							--sky-size: 100% 50%;
+							--sky-position: left top;
+							
+							/*
+							 * sea
+							 */
+							
+							--sea-skeleton: linear-gradient(blue 100%, transparent);
+							--sea-size: 100% 50%;
+							--sea-position: left bottom;
+							
+							/*
+							 * sun
+							 */
+							
+							--sun-skeleton: radial-gradient(circle 100px at center, yellow 80%, #F3F360 95%, transparent);
+							--sun-size: 300px 300px;
+							--sun-position: 85% 15%;
+							
+							/*
+							 * mountain
+							 */
+							 
+							--mountain-width : 300px;
+							--mountain-height : 300px;
+							--mountain-size: var(--mountain-width) var(--mountain-height);	
+							--mountain-left-deg: -45deg;
+							--mountain-right-deg: 45deg;	
+							--mountain-skeleton: 
+								brown 0%,
+								brown 50%,
+								transparent 50%,
+								transparent 100%;
+									
+							
+							/*
+							 * mountain left
+							 */
+							
+							--mountain-left: linear-gradient(
+							  var(--mountain-left-deg),
+							  var(--mountain-skeleton)
+							);
+							--mountain-left-position: calc(50% - (var(--mountain-width) / 2)) calc(50% - (var(--mountain-height) / 2));
+							
+							/*
+							 * mountain right
+							 */
+
+							--mountain-right: linear-gradient(
+							  var(--mountain-right-deg),
+							  var(--mountain-skeleton)
+							);
+							--mountain-right-position: calc(50% + (var(--mountain-width) / 2)) calc(50% - (var(--mountain-height) / 2));
+							
+							/*
+							 * ship
+							 */
+
+							--ship-width : 100px;
+							--ship-height : 100px;
+							--ship-size: var(--ship-width) var(--ship-height);
+							--ship-body-size: calc(var(--ship-width) * 2) var(--ship-height);				
+							--ship-head-deg: -135deg;
+							--ship-pupa-deg: 120deg;
+							--ship-x: 150px;	
+							--ship-y: 65%;				
+							--ship-skeleton: 
+								gray 0%,
+								gray 50%,
+								transparent 50%,
+								transparent 100%;
+							--ship-body-skeleton: 
+								gray 100%,
+								transparent 0%;	
+
+							/*
+							 * ship-head
+							 */
+
+							--ship-head: linear-gradient(
+							  var(--ship-head-deg),
+							  var(--ship-skeleton)
+							);
+							--ship-head-position: var(--ship-x) var(--ship-y);
+
+							/*
+							 * ship-body
+							 */
+
+							--ship-body: linear-gradient(
+							  var(--ship-body-skeleton)
+							);
+							--ship-body-position: calc(var(--ship-x) + var(--ship-width)) var(--ship-y);
+
+							/*
+							 * ship-pupa
+							 */
+
+							--ship-pupa: linear-gradient(
+							  var(--ship-pupa-deg),
+							  var(--ship-skeleton)
+							);
+							--ship-pupa-position: calc(var(--ship-x) + (var(--ship-width) * 3)) var(--ship-y);
+
+							/*
+							 * ship-pole
+							 */
+
+							--ship-pole-width : 20px;
+							--ship-pole-height : 180px;
+							--ship-pole-size: var(--ship-pole-width) var(--ship-pole-height);
+							--ship-pole-x: calc(var(--ship-x) + calc(var(--ship-width) * 2));	
+							--ship-pole-y: calc(var(--ship-y) - (calc(var(--ship-pole-height) / 2)));
+							--ship-pole-position: var(--ship-pole-x) var(--ship-pole-y);	
+							--ship-pole-skeleton: 
+								gray 100%,
+								transparent 0%;
+							--ship-pole: linear-gradient(
+							  var(--ship-pole-skeleton)
+							);		
+							
+						}
+						
+						.canvas {
+							
+							height: var(--canvas-height);
+
+							background-image:
+											var(--sun-skeleton),
+											var(--ship-pole),
+											var(--mountain-right),
+											var(--mountain-left),
+											var(--ship-head),
+											var(--ship-body),
+											var(--ship-pupa),
+											var(--sea-skeleton),
+											var(--sky-skeleton);
+											
+							background-position:
+											var(--sun-position),
+											var(--ship-pole-position),
+											var(--mountain-right-position),
+											var(--mountain-left-position),
+											var(--ship-head-position),
+											var(--ship-body-position),
+											var(--ship-pupa-position),							
+											var(--sea-position),
+											var(--sky-position);
+											
+							background-size:
+											var(--sun-size),
+											var(--ship-pole-size),
+											var(--mountain-size),
+											var(--mountain-size),
+											var(--ship-size),
+											var(--ship-body-size),
+											var(--ship-size),
+											var(--sea-size),
+											var(--sky-size);
+											
+							background-repeat: no-repeat;				
+							
+						}
+					</pre>
+				</code>	
+
+			</section>
+
+		</main>
+
+	  </body>
+
+	</html>

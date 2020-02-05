@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+
+<html lang="tr">
+
+	<head>
+
+		<meta charset="utf-8">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<meta name="description" content="Baris Karaderili Resmi Web Sitesi">
+
+		<meta name="keywords" content="baris, karaderili, baris karaderili, barisk, bariskrdrl, devbarisk">
+
+		<meta name="author" content="Baris Karaderili - info@bariskaraderili.com">
+
+		<title>Baris Karaderili - Mix Blend Mode Ile Cildirmacalar!</title>
+
+		<style media="screen">
+
+			:root {
+				--blue: #002B65;
+				--red: #BF0A30;
+			}
+
+			html { font-family: 'Tahoma'; }
+
+			img { max-width: 100%; }
+
+			.e { color: royalblue; }
+
+			.p { color: darkred; }
+
+			.b { display: block; }
+
+			.t { padding-left: 20px; }
+
+			.mix-blend {
+				position: relative;
+				display: inline-block;
+			}
+
+			.mix-blend img {
+				position: relative;
+				z-index: -1;
+			}
+
+			.mix-blend p {
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+				margin: 0px;
+				text-align: center;
+				width: 100%;
+			}
+
+			.mix-blend.small p {
+				color: purple;
+				font-size: 50px;
+				font-weight: bold;
+				text-transform: uppercase;
+				mix-blend-mode: color-burn;
+			}
+
+			.mix-blend.big p {
+				color: white;
+				font-size: 63px;
+				font-weight: bold;
+				mix-blend-mode: overlay;
+			}
+
+			/*.mix-item {
+				position: absolute;
+				background-color: purple;
+				border: 30px solid blue;
+				width: 100%;
+				height: 100%;
+				z-index: 0;
+				box-sizing: border-box;
+			}
+
+			.mix-blend.animated .mix-item {
+				animation: mix-blend 32s infinite;
+				mix-blend-mode: normal;
+			}
+
+			.mix-blend.animated p::before {
+				animation: content 32s infinite;
+				content: '';
+			}
+
+			@keyframes mix-blend {
+				0% { mix-blend-mode: normal; }
+				6.25% { mix-blend-mode: multiply; }
+				12.5% { mix-blend-mode: screen; }
+				18.75% { mix-blend-mode: overlay; }
+				25% { mix-blend-mode: darken; }
+				31.25% { mix-blend-mode: lighten; }
+				37.5% { mix-blend-mode: color-dodge; }
+				43.75 % { mix-blend-mode: color-burn; }
+				50% { mix-blend-mode: hard-light; }
+				56.25% { mix-blend-mode: soft-light; }
+				62.5% { mix-blend-mode: difference; }
+				68.75% { mix-blend-mode: exclusion; }
+				75% { mix-blend-mode: hue; }
+				81.25% { mix-blend-mode: saturation; }
+				87.5% { mix-blend-mode: color; }
+				93.25% { mix-blend-mode: luminosity; }
+				100% { mix-blend-mode: normal; }
+			}
+
+			@keyframes content {
+				0% { content: 'normal'; }
+				6.25% { content: 'multiply'; }
+				12.5% { content: 'screen'; }
+				18.75% {content: 'overlay'; }
+				25% { content: 'darken'; }
+				31.25% { content: 'lighten'; }
+				37.5% { content: 'color-dodge'; }
+				43.75 % { content: 'color-burn'; }
+				50% { content: 'hard-light'; }
+				56.25% { content: 'soft-light'; }
+				62.5% { content: 'difference'; }
+				68.75% { content: 'exclusion'; }
+				75% { content: 'hue'; }
+				81.25% { content: 'saturation'; }
+				87.5% { content: 'color'; }
+				93.25% { content: 'luminosity'; }
+				100% { content: 'normal'; }
+			}*/
+
+			.wrapper {
+			  background: url('images/under-sea.jpg') no-repeat center center fixed;
+			  background-size: cover;
+			  display: flex;
+			  flex-direction: column;
+			  align-items: center;
+			  justify-content: center;
+			  height: 100vh;
+			  width: 100%;
+				position: relative;
+			}
+
+			.box {
+			  justify-content: center;
+			  align-items: center;
+			  display: flex;
+			  flex-direction: column;
+			  font-size: 5vw;
+			  border: 10px solid  var(--red);
+			  line-height: 1;
+			  background-color: var(--blue);
+			  color: white;
+			  background-size: cover;
+			  mix-blend-mode: hard-light;
+			  height: 50vh;
+			  width: 70vw;
+			  text-align: center;
+			  text-transform: uppercase;
+			}
+
+			.mode-name-wrapper {
+			  position: absolute;
+			  bottom: 20px;
+			  left: 0px;
+			  right: 0px;
+			  color: var(--blue);
+			  text-align: center;
+			  text-transform: uppercase;
+			  font-size: 17px;
+			  margin: 0px auto;
+			  padding: 0px;
+			  width: 135px;
+			  height: 135px;
+			  border: 5px solid white;
+			  background-color: #DDDDDD;
+			  border-radius: 100%;
+			  display: flex;
+			  flex-direction: column;
+			  justify-content: center;
+			  align-items: center;
+			}
+
+			.mode-name {
+			    position: relative;
+			    left: 0px;
+			    right: 0px;
+			    animation: nudge 2.5s ease;
+			    animation-iteration-count: infinite;
+			}
+
+			@keyframes nudge {
+			  0% {
+			    transform: translate(0px, 0px);
+			  }
+			  80% {
+			    transform: translate(0px, 0px);
+			  }
+			  90% {
+			    transform: translate(-10px, 0px);
+			  }
+			  93% {
+			    transform: translate(12px, 0px);
+			  }
+			  95% {
+			    transform: translate(-8px, 0px);
+			  }
+			  100% {
+			    transform: translate(0px, 0px);
+			  }
+			}
+
+		</style>
+
+	</head>
+
+	<body>
+
+		<header>
+
+			<h1>Mix Blend Mode Ile Cildirmacalar!</h1>
+
+		</header>
+
+		<main>
+
+			<section>
+
+				<p><strong>background-blend-mode ile yapabildigimiz her seyi istedigimiz elemanlarla yapmamizi saglayan sokuk ie nin desteklemedigi css ozelligi :)</strong></p>
+
+				<p>Simdi bunu orneklerle gorelim!</p>
+
+				<h3>Ornek 1:</h3>
+
+				<div class="mix-blend text small">
+
+					<img src="images/baudelaire.jpg" alt="baudelaire" />
+
+					<p lang="en">Baudelaria</p>
+
+				</div>
+
+				<p>Text iceren elemana vermek istedigimiz mix-blend-mode ozelligini verdigimizde ikisini bir birine yedirme islemi yapmaktadir.<strong>(Bir yedirmeyle daha basbasayiz!)</strong></p>
+
+				<h3>Ornek 2:</h3>
+
+				<div class="mix-blend text big">
+
+					<img src="images/johnny-got-his-gun.jpg" alt="johnny got his gun" />
+
+					<p lang="en">I don't know whether I'm alive and dreaming or dead and remembering.</p>
+
+				</div>
+
+				<h3>Ornek 3:</h3>
+
+				<div class="wrapper">
+				  <div class="box">
+				    <p>CORUM</p>
+				  </div>
+				  <small class="mode-name-wrapper">
+				    <span class="mode-name">hard-light</span>
+				   </small>
+				</div>
+
+				<small>Not: Bu ornek internetde bir yerde var!</small>
+
+				<h3>Diyebilirsin?</h3>
+
+				<p>Nerden anliyacagiz hangisini kullanacagimizi kardes.</p>
+
+				<p>Bu ozellikler direk photoshop ozellikleri oldugu icin tasarimda bu boka benzer seyler gordugunde tikla!</p>
+
+				<p>Sag tarafta bu ozelliklerin hangisi kullanildiysa onu gosterecektir.</p>
+
+				<p><b>Not: </b> Photoshop un turkceyse <mark>sictin :)</mark></p>
+
+				<h3>Yapabilirsin?</h3>
+
+				<p>Gordugun orneklerdeki gibi her turlu yedirme islemi!</p>
+
+			</section>
+
+		</main>
+
+		<footer>
+
+			<h3><strong>Herkes yedirdigine yedirdigini soylesin!</strong></h3>
+
+			<a href="../../blog.html">Diger Yazilar</a>
+
+		</footer>
+
+		<script type="text/javascript">
+
+			var modeList = [
+			'normal',
+			'multiply',
+			'screen',
+			'overlay',
+			'darken',
+			'lighten',
+			'color-dodge',
+			'color-burn',
+			'hard-light',
+			'soft-light',
+			'difference',
+			'exclusion',
+			'hue',
+			'saturation',
+			'color',
+			'luminosity'
+			],
+				elem = document.querySelector('.box'),
+			propertyName = 'mix-blend-mode',
+			modeElem = document.querySelector('.mode-name'),
+			duration = 2500;
+
+			var i = 0;
+			var activate = setInterval(function() {
+			if (i == modeList.length) i = 0;
+			var mode = modeList[i]
+			elem.style.mixBlendMode = mode;
+			modeElem.innerText = mode;
+			i++;
+			},duration);
+
+			activate();
+
+		</script>
+
+	</body>
+
+</html>

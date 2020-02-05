@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+
+<html lang="tr">
+
+	<head>
+
+		<meta charset="utf-8">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<meta name="description" content="Baris Karaderili Resmi Web Sitesi">
+
+		<meta name="keywords" content="baris, karaderili, baris karaderili, barisk, bariskrdrl, devbarisk">
+
+		<meta name="author" content="Baris Karaderili - info@bariskaraderili.com">
+
+		<title>Baris Karaderili - Box Decoration Break Clone</title>
+
+		<style media="screen">
+
+			html { font-family: 'Tahoma'; }
+
+			.e { color: royalblue; }
+
+			.p { color: darkred; }
+
+			.b { display: block; }
+
+			.t { padding-left: 20px; }
+
+			.example { max-width: 50%; }
+
+			.border {
+				padding: 0.5rem 2rem;
+				background-color: red;
+				color: #FFFFFF;
+				font-size: 19px;
+				line-height: 50px;
+				border: 3px solid #000000;
+			}
+
+			.box-shadow {
+				box-shadow:
+			    10px 0 0 0 red,
+			    -10px 0 0 0 blue;
+				line-height: 50px;
+				padding: 0px 10px;
+				font-size: 19px;
+			}
+
+			.border-radius {
+				background: linear-gradient(to bottom right, yellow, green);
+				box-shadow: 8px 8px 10px 0px deeppink, -5px -5px 5px 0px blue, 5px 5px 15px 0px yellow;
+				padding: 0em 1em;
+				border-radius: 16px;
+				border-style: solid;
+				margin-left: 10px;
+				font: 24px sans-serif;
+				line-height: 2;
+			}
+
+			.clone {
+				-webkit-box-decoration-break: clone;
+				-o-box-decoration-break: clone;
+				box-decoration-break: clone;
+				-ms-box-decoration-break: clone;
+			}
+
+			.slice {
+				-webkit-box-decoration-break: slice;
+				-o-box-decoration-break: slice;
+				box-decoration-break: slice;
+				-ms-box-decoration-break: slice;
+			}
+
+		</style>
+
+	</head>
+
+	<body>
+
+		<header>
+
+			<h1>Box Decoration Break Clone</h1>
+
+		</header>
+
+		<main>
+
+			<section>
+
+				<p><strong>Clonla ve gulumse!</strong></p>
+
+				<p>Bir yazinin her satirina ayni ozellik vermek istedigimiz durumlar olabilir.Ornegin padding, border, golge vb. ozellikler.</p>
+
+				<p>box-decoration-break ozelligi sayesinde birden fazla satirli yazilarda her satira ayni ozelligi vermemiz mumkun.</p>
+
+				<p>Verdigimiz ozelligi sanki her satir tek basina bir bireymis gibi varsayar ve her satira ayri ayri verir.</p>
+
+				<p>Ayni islemi bu ozellik olmadan yapmak istersek her satir icin ayri tag acarak bunlara bu ozellikleri vermek zorunda kalirdik.</p>
+
+				<p></p>
+
+				<h3>Ornek</h3>
+
+				<h4><mark>Slice</mark></h4>
+
+				 <div class="example">
+
+ 					<span class="slice border">
+ 						It is a long established fact that a reader will be distracted by the readable content of
+ 						a page when looking at its layout.It is a long established fact that a reader will be distracted
+ 						by the readable content of a page when looking at its layout.It is a long established fact that a
+ 						reader will be distracted by the readable content of a page when looking at its layout.
+ 					</span>
+
+ 				</div>
+
+				<h4><mark>Clone</mark></h4>
+
+				<div class="example">
+
+					<span class="clone border">
+						It is a long established fact that a reader will be distracted by the readable content of
+						a page when looking at its layout.It is a long established fact that a reader will be distracted
+						by the readable content of a page when looking at its layout.It is a long established fact that a
+						reader will be distracted by the readable content of a page when looking at its layout.
+					</span>
+
+				</div>
+
+				<h4><mark>Slice</mark></h4>
+
+				 <div class="example">
+
+ 					<span class="slice box-shadow">
+ 						It is a long established fact that a reader will be distracted by the readable content of
+ 						a page when looking at its layout.It is a long established fact that a reader will be distracted
+ 						by the readable content of a page when looking at its layout.It is a long established fact that a
+ 						reader will be distracted by the readable content of a page when looking at its layout.
+ 					</span>
+
+ 				</div>
+
+				<h4><mark>Clone</mark></h4>
+
+				 <div class="example">
+
+ 					<span class="clone box-shadow">
+ 						It is a long established fact that a reader will be distracted by the readable content of
+ 						a page when looking at its layout.It is a long established fact that a reader will be distracted
+ 						by the readable content of a page when looking at its layout.It is a long established fact that a
+ 						reader will be distracted by the readable content of a page when looking at its layout.
+ 					</span>
+
+ 				</div>
+
+				<h4><mark>Slice</mark></h4>
+
+				 <div class="example">
+
+ 					<span class="slice border-radius">
+ 						It is a long established fact that a reader will be distracted by the readable content of
+ 						a page when looking at its layout.It is a long established fact that a reader will be distracted
+ 						by the readable content of a page when looking at its layout.It is a long established fact that a
+ 						reader will be distracted by the readable content of a page when looking at its layout.
+ 					</span>
+
+ 				</div>
+
+				<h4><mark>Clone</mark></h4>
+
+				 <div class="example">
+
+ 					<span class="clone border-radius">
+ 						It is a long established fact that a reader will be distracted by the readable content of
+ 						a page when looking at its layout.It is a long established fact that a reader will be distracted
+ 						by the readable content of a page when looking at its layout.It is a long established fact that a
+ 						reader will be distracted by the readable content of a page when looking at its layout.
+ 					</span>
+
+ 				</div>
+
+				<div class="">
+
+					<h3>Kullanilisi</h3>
+
+					<span class="b"><span class="e">-webkit-box-decoration-break:</span> <span>clone;</span></span>
+					<span class="b"><span class="e">-o-box-decoration-break:</span> <span>clone;</span></span>
+					<span class="b"><span class="e">box-decoration-break:</span> <span>clone;</span></span>
+					<span class="b"><span class="e">-ms-box-decoration-break:</span> <span>clone;</span></span>
+
+				</div>
+
+				<p><strong>Not: Insan clone lama da gelecek! <mark>Tim amca soz verdi!</mark></strong></p>
+
+			</section>
+
+		</main>
+
+		<footer>
+
+			<h3><strong>Css le kalin :)</strong></h3>
+
+			<a href="../../blog.html">Diger Yazilar</a>
+
+		</footer>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js">
+
+    <script type="text/javascript" src="https://cdn.rawgit.com/LeaVerou/conic-gradient/gh-pages/conic-gradient.js">
+
+    </script>
+
+	</body>
+
+</html>

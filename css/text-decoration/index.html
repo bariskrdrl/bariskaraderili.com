@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html lang="tr">
+
+	<head>
+
+		<meta charset="utf-8">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<meta name="description" content="Baris Karaderili Resmi Web Sitesi">
+
+		<meta name="keywords" content="baris, karaderili, baris karaderili, barisk, bariskrdrl, devbarisk">
+
+		<meta name="author" content="Baris Karaderili - info@bariskaraderili.com">
+
+		<title>Baris Karaderili - Text Decoration Skip</title>
+
+		<style media="screen">
+
+			html { font-family: 'Tahoma'; }
+
+			.e { color: royalblue; }
+
+			.p { color: darkred; }
+
+			.b { display: block; }
+
+			.t { padding-left: 20px; }
+
+      .underline {text-decoration: underline; font-size: 35px; font-weight: 600;}
+
+      .objects {text-decoration-skip: objects;}
+
+      .spaces {text-decoration-skip: spaces;}
+
+      .ink {text-decoration-skip: ink;}
+
+      .edges {text-decoration-skip: edges;}
+
+      .objects-spaces {text-decoration-skip: objects spaces;}
+
+      .ink-edges-box-decoration {text-decoration-skip: ink edges box-decoration;}
+
+		</style>
+
+	</head>
+
+	<body>
+
+		<header>
+
+			<h1>Text Decoration Skip</h1>
+
+		</header>
+
+		<main>
+
+			<section>
+
+				<p>Yine <abbr title="Cascading Style Sheets">CSS</abbr> gelistiricilerinin ince dusunup yapmis oldugu bu ozellik Chorome ve Opera ile hayatimiza giris yapti.</p>
+
+				<h3>Oncesi</h3>
+
+        <div class="">
+
+          <span class="e">text-decoraion: <span class="p">underline;</span></span>
+
+        </div>
+
+        <p class="underline"> مرحبا كيف حالك نرحب </p>
+
+        <h3>Sonrasi</h3>
+
+        <div class="">
+
+          <span class="b">
+            <span class="e">text-decoraion-skip: <span class="p">ink;</span></span>
+          </span>
+
+        </div>
+
+        <p class="underline ink"> مرحبا كيف حالك نرحب </p>
+
+			</section>
+
+      <section>
+
+        <p>Goruldugu gibi bu ozellik asagiya dogru uzuvu bulunan harfler icin gayet kullanisli gozukuyor.</p>
+
+        <p>Suan da tarayici destegi sinirli olsada underline kullanacagimiz yerlerde skip kodunuda eklememiz bize bir sorun cikarmayacaktir.</p>
+
+        <p>Destek veren tarayicilarda ilk gorunum gibi gozukecektir.Destek verenlerde ise ikinci ornegimizdeki gibi olacaktir.</p>
+
+      </section>
+
+		</main>
+
+		<footer>
+
+			<h3><strong>Css le kalin :)</strong></h3>
+
+			<a href="../../blog.html">Diger Yazilar</a>
+
+		</footer>
+
+	</body>
+
+</html>

@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+
+<html lang="tr">
+
+<head>
+
+	<meta charset="utf-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta name="description" content="Baris Karaderili Resmi Web Sitesi">
+
+	<meta name="keywords" content="baris, karaderili, baris karaderili, barisk, bariskrdrl, devbarisk">
+
+	<meta name="author" content="Baris Karaderili - info@bariskaraderili.com">
+
+	<title>Baris Karaderili - Babaya Itaat</title>
+
+	<style media="screen">
+		html {
+			font-family: 'Tahoma';
+		}
+
+		.e {
+			color: royalblue;
+		}
+
+		.p {
+			color: darkred;
+		}
+
+		.b {
+			display: block;
+		}
+
+		.t {
+			padding-left: 20px;
+		}
+
+		.c {
+			color: #000000;
+		}
+
+		html {
+			font-family: 'Tahoma';
+		}
+
+		.container {
+			max-width: 1000px;
+			margin: 0px auto;
+		}
+
+		.baba {
+			display: grid;
+			display: -ms-grid;
+		}
+
+		.cocuk {
+			background-color: black;
+			padding: 10px;
+			border-radius: 5px;
+			color: white;
+			font-weight: bold;
+		}
+
+		.cocuk:nth-child(even) {
+			background-color: gray;
+		}
+		/* baba-1 */
+
+		.baba-1 {
+			grid-template-columns: 200px 200px 200px 200px;
+			grid-template-rows: 200px 200px 200px 200px;
+			grid-column-gap: 20px;
+			grid-row-gap: 20px;
+		}
+		/* baba-2 */
+
+		.baba-2 {
+			grid-template-columns: 1fr 1fr 1fr 400px;
+			grid-template-rows: 200px 200px 200px 200px;
+			grid-column-gap: 20px;
+			grid-row-gap: 20px;
+		}
+
+		@media screen and (max-width: 960px) {
+			.baba-2 {
+				grid-template-columns: 1fr 1fr;
+			}
+		}
+		/* baba-3 */
+
+		.baba-3 {
+			grid-template-columns: repeat(4, 1fr);
+			grid-gap: 20px;
+			grid-auto-rows: 200px;
+		}
+		/* baba-4 */
+
+		.baba-4 {
+			grid-template-columns: repeat(2, 2fr 1fr);
+			grid-gap: 20px;
+			grid-auto-rows: 200px;
+		}
+		/* baba-5 */
+
+		.baba-5 {
+			grid-template-columns: 200px repeat(3, 1fr);
+			grid-gap: 20px;
+			grid-auto-rows: 200px;
+		}
+		/* baba-6 */
+
+		.baba-6 {
+			grid-template-columns: minmax(300px, 600px) 1fr;
+			grid-gap: 20px;
+			grid-auto-rows: minmax(100px auto);
+		}
+		/* baba-7 */
+
+		.baba-7 {
+			grid-template-columns: repeat(3, 1fr);
+			grid-gap: 20px;
+			grid-auto-flow: column;
+			grid-auto-rows: 200px;
+		}
+		/* baba-8 */
+
+		.baba-8 {
+			grid-template-columns: repeat(3, 1fr);
+			grid-gap: 20px;
+			grid-auto-flow: column;
+			grid-template-rows: repeat(3, 200px);
+		}
+		/* baba-9 */
+
+		.baba-9 {
+			grid-template-columns: repeat(3, 1fr);
+			grid-gap: 20px;
+			grid-auto-flow: column;
+			grid-template-rows: repeat(3, 200px);
+		}
+
+		.baba-9 .span-2 {
+			order: 2;
+		}
+
+		.baba-9 .span-5 {
+			order: 3;
+		}
+		/* baba-10 */
+
+		.baba-10 {
+			grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+			grid-gap: 20px;
+			grid-auto-rows: 200px;
+		}
+		/* baba-11 */
+
+		.baba-11 {
+			grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+			grid-gap: 20px;
+			grid-auto-rows: 200px;
+		}
+		/* baba-12 */
+
+		.baba-12 {
+			grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+			grid-gap: 2px;
+			grid-auto-rows: minmax(150px, auto);
+		}
+
+		.baba-12 .span-2 {
+			background-color: blue;
+			grid-column-end: span 2;
+			grid-row-end: span 2;
+		}
+
+		.baba-12 .span-3 {
+			background-color: green;
+			grid-column-end: span 3;
+			grid-row-end: span 3;
+		}
+
+		.baba-12.dense {
+			grid-auto-flow: dense;
+		}
+		/* baba-13 */
+
+		.baba-13 {
+			grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+			grid-gap: 2px;
+			grid-auto-rows: minmax(150px, auto);
+		}
+
+		.baba-13 .span-1 {
+			grid-column-start: 1;
+			grid-column-end: 4;
+		}
+
+		.baba-13 .span-5 {
+			grid-row-start: 2;
+			grid-row-end: 4;
+		}
+		/* baba-14 */
+
+		.baba-14 {
+			grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+			grid-gap: 2px;
+			grid-auto-rows: minmax(150px, auto);
+		}
+
+		.baba-14 .span-1 {
+			grid-column: 6;
+			grid-row: 2;
+		}
+
+		.baba-14 .span-3 {
+			grid-column: span 3;
+		}
+
+		.baba-14 .span-5 {
+			grid-column: 1;
+			grid-row: 2;
+		}
+
+		.baba-14 .span-11 {
+			grid-column: 1 / -1;
+		}
+
+		.baba-15 {
+			grid-template-columns: [content-start] 1fr [content-end];
+			grid-template-rows: minmax(100px, auto) [content-start] minmax(200px, auto) [content-end];
+			grid-gap: 20px;
+		}
+
+		.baba-15 article {grid-column: content-start; grid-row: content-start;}
+
+		@media screen and (min-width: 960px) {
+
+			.baba-15 {grid-template-columns: 2fr [content-start] 4fr [content-end];}
+
+			.baba-15 header {grid-column: 1 / -1;}
+
+			.baba-15 aside {grid-column: 1; grid-row: 2;}
+
+			.baba-15 footer {grid-column: 1 / -1;}
+
+		}
+
+		
+
+	</style>
+
+</head>
+
+<body>
+
+	<header class="container">
+
+		<h1>Filmin son sahnesi - Babaya Itaat!</h1>
+
+	</header>
+
+	<main class="container">
+
+		<h3>Grid Notlarim</h3>
+
+		<p>Duzendi sistemdi kullanmadigimiz grid sistemi kalmamisken bizim dayilarin kurguladigi(<a href='https://www.w3.org/People/'>https://www.w3.org/People/</a>)
+			grid sistemi yekten hayatimiza girmis bulunuyor.(Teyzelerde var)</p>
+
+		<p>Cocuklar artik babalarindan net emirler alir ve emre itaat edenler istedigi yerde tatil yapabilir ;)</p>
+
+		<section>
+
+			<h3>Grid Olusturma</h3>
+
+			<div class="baba baba-1">
+
+				<div class="cocuk">1</div>
+				<div class="cocuk">2</div>
+				<div class="cocuk">3</div>
+				<div class="cocuk">4</div>
+				<div class="cocuk">5</div>
+				<div class="cocuk">6</div>
+				<div class="cocuk">7</div>
+				<div class="cocuk">8</div>
+				<div class="cocuk">9</div>
+				<div class="cocuk">10</div>
+				<div class="cocuk">11</div>
+				<div class="cocuk">12</div>
+				<div class="cocuk">13</div>
+				<div class="cocuk">14</div>
+				<div class="cocuk">15</div>
+				<div class="cocuk">16</div>
+
+			</div>
+
+			<p>Simdi dedik ki baba sen grid ol cocuklarda column olsun.Simdi bu cocuklarda babaya itaat ederek kendilerini row larin
+				icerisine column olarak attilar.</p>
+
+			<details>
+
+				<summary>
+					<mark>Suan da yazilan <abbr title='Cascading Style Sheets'>CSS</abbr> icin <b>tikla!</b></mark>
+				</summary>
+
+				<div>
+					<span class="b">baba {</span>
+					<span class="b">
+								<span class="e t">display: </span><span class="p">grid;</span>
+					</span>
+					<span class="b">
+								<span class="e t">grid-template-columns: </span><span class="p">200px 200px 200px 200px;</span>
+					</span>
+					<span class="b">
+								<span class="e t">grid-template-rows: </span><span class="p">200px 200px 200px 200px;</span>
+					</span>
+					<span class="b">
+								<span class="e t">grid-column-gap: </span><span class="p">20px;</span>
+					</span>
+					<span class="b">
+								<span class="e t">grid-row-gap: </span><span class="p">20px;</span>
+					</span>
+					<span class="b">}</span>
+				</div>
+
+			</details>
+
+			<p><span class="e b">grid-template-columns: <strong> <span class="c">// yan yana kac cocuk gelecek ve genislikleri ne olacak? </span></strong>
+				</span>
+			</p>
+			<p><span class="e b">grid-template-rows: <strong> <span class="c">// alt alta kac cocuk sirasi gelecek ve yuksekligi ne olacak? </span></strong>
+				</span>
+			</p>
+			<p><span class="e b">grid-column-gap: <strong> <span class="c">// yan yana gelen cocuklarin arasinda ne kadar bosluk olacak? </span></strong>
+				</span>
+			</p>
+			<p><span class="e b">grid-row-gap: <strong> <span class="c">// alt alta gelen cocuk siralarinin arasinda ne kadar bosluk olacak? </span></strong>
+				</span>
+			</p>
+			<p><span class="e b">grid-gap: <strong> <span class="c">// cocuklar ve cocuk siralarinin arasinda ne kadar bosluk olacak? </span></strong>
+				</span>
+			</p>
+			<p><span class="e b">grid-auto-columns: <strong> <span class="c">// belirtmedigin cocuk genislikleri ? </span></strong>
+				</span>
+			</p>
+			<p><span class="e b">grid-auto-rows: <strong> <span class="c">// belirtmedigin satir yukseklikleri? </span></strong>
+				</span>
+			</p>
+
+		</section>
+
+		<hr>
+
+		<section>
+
+			<h3>fr brimi</h3>
+
+			<p>Bu sekilde olusturdugumuz grid yapisi responsive olmadigi icin fr adinda bir birim de eklemisler.Bu demek oluyorki bir
+				cocuka 1fr dersek babasinin genisligini alir.</p>
+
+			<p>Az onceki ornekteki gibi yapacak olsakydik cocuklara 1fr 1fr 1fr 1fr verecektik.</p>
+
+			<p>Burada soyle dusunebiliriz baba 4 cocuklarin her biride 1 yani bir cocuk 1/4 genisligine sahip oluyor.</p>
+
+			<p>Bu senaryoda ekran tablete gectiginde grid-template-columns: 1fr 1fr; dersek artik baba 2 cocuklar 1 yani bir cocuk 1/2
+				olacak ve her zaman ekrani dolduracaklar.</p>
+
+			<div class="baba baba-2">
+
+				<div class="cocuk">1</div>
+				<div class="cocuk">2</div>
+				<div class="cocuk">3</div>
+				<div class="cocuk">4</div>
+				<div class="cocuk">5</div>
+				<div class="cocuk">6</div>
+				<div class="cocuk">7</div>
+				<div class="cocuk">8</div>
+				<div class="cocuk">9</div>
+				<div class="cocuk">10</div>
+				<div class="cocuk">11</div>
+				<div class="cocuk">12</div>
+				<div class="cocuk">13</div>
+				<div class="cocuk">14</div>
+				<div class="cocuk">15</div>
+				<div class="cocuk">16</div>
+
+			</div>
+
+			<p>Babaya itaat eden cocuklar babalarinin belirledigi sinir disina cikmaya cesaret edemiyor!</p>
+
+			<p>Sabit deger alan kardes dislanir ve (baba - sabit deger alan cocuk) / 3 = kan kardesler </p>
+
+			<details>
+
+				<summary>
+					<mark>Suan da yazilan <abbr title='Cascading Style Sheets'>CSS</abbr> icin <b>tikla!</b></mark>
+				</summary>
+
+				<div>
+					<span class="b">baba {</span>
+					<span class="b">
+								<span class="e t">display: </span><span class="p">grid;</span>
+					</span>
+					<span class="b">
+								<span class="e t">grid-template-columns: </span><span class="p">1fr 1fr 1fr 400px;</span>
+					</span>
+					<span class="b">
+								<span class="e t">grid-template-rows: </span><span class="p">200px 200px 200px 200px;</span>
+					</span>
+					<span class="b">
+								<span class="e t">grid-column-gap: </span><span class="p">20px;</span>
+					</span>
+					<span class="b">
+								<span class="e t">grid-row-gap: </span><span class="p">20px;</span>
+					</span>
+					<span class="b">}</span>
+				</div>
+
+			</details>
+
+		</section>
+
+		<hr>
+
+		<section>
+
+			<h3>repeat()</h3>
+
+			<p>Yav kardesim benim 9999999 column var ben elle tek tek yazacakmiyim bunlari?</p>
+
+			<div class="baba baba-3">
+
+				<div class="cocuk">1</div>
+				<div class="cocuk">2</div>
+				<div class="cocuk">3</div>
+				<div class="cocuk">4</div>
+
+			</div>
+
+			<p>Burada baba cocuklara 4 kisi yanyana 1/4 olsun dedi!</p>
+
+			<details>
+
+				<summary>
+					<mark>Suan da yazilan <abbr title='Cascading Style Sheets'>CSS</abbr> icin <b>tikla!</b></mark>
+				</summary>
+
+				<div>
+					<span class="b">baba {</span>
+					<span class="b">
+								<span class="e t">display: </span><span class="p">grid;</span>
+					</span>
+					<span class="b">
+								<span class="e t">grid-template-columns: </span><span class="p">repeat(4, 1fr);</span>
+					</span>
+					<span class="b">
+								<span class="e t">grid-auto-rows: </span><span class="p">200px;</span>
+					</span>
+					<span class="b">
+								<span class="e t">grid-gap: </span><span class="p">20px;</span>
+					</span>
+					<span class="b">}</span>
+				</div>
+
+			</details>
+
+			<h4>Farkli bir repeat ornegi</h4>
+
+			<div class="baba baba-4">
+
+				<div class="cocuk">1</div>
+				<div class="cocuk">2</div>
+				<div class="cocuk">3</div>
+				<div class="cocuk">4</div>
+
+			</div>
+
+			<p>Burada baba cocuklara 4 kisi yanyana 1/2 1/4 1/2 1/4 olsun dedi!</p>
+
+			<details>
+
+				<summary>
+					<mark>Suan da yazilan <abbr title='Cascading Style Sheets'>CSS</abbr> icin <b>tikla!</b></mark>
+				</summary>
+
+				<div>
+					<span class="b">baba {</span>
+					<span class="b">
+								<span class="e t">display: </span><span class="p">grid;</span>
+					</span>
+					<span class="b">
+								<span class="e t">grid-template-columns: </span><span class="p">repeat(2, 2fr 1fr);</span>
+					</span>
+					<span class="b">
+								<span class="e t">grid-auto-rows: </span><span class="p">200px;</span>
+					</span>
+					<span class="b">
+								<span class="e t">grid-gap: </span><span class="p">20px;</span>
+					</span>
+					<span class="b">}</span>
+				</div>
+
+			</details>
+
+			<h4>Istersem boyle de yapabilirim</h4>
+
+			<div class="baba baba-5">
+
+				<div class="cocuk">1</div>
+				<div class="cocuk">2</div>
+				<div class="cocuk">3</div>
+				<div class="cocuk">4</div>
+
+			</div>
+
+			<p>Burada baba cocuklara 1 kisi 200px diger 3 kisi (baba - 200px) / 3 olsun dedi!</p>
+
+			<details>
+
+				<summary>
+					<mark>Suan da yazilan <abbr title='Cascading Style Sheets'>CSS</abbr> icin <b>tikla!</b></mark>
+				</summary>
+
+				<div>
+					<span class="b">baba {</span>
+					<span class="b">
+								<span class="e t">display: </span><span class="p">grid;</span>
+					</span>
+					<span class="b">
+								<span class="e t">grid-template-columns: </span><span class="p">200px repeat(3, 1fr);</span>
+					</span>
+					<span class="b">
+								<span class="e t">grid-auto-rows: </span><span class="p">200px;</span>
+					</span>
+					<span class="b">
+								<span class="e t">grid-gap: </span><span class="p">20px;</span>
+					</span>
+					<span class="b">}</span>
+				</div>
+
+			</details>
+
+		</section>
+
+		<hr>
+
+		<section>
+
+			<h2>minmax()</h2>
+
+			<p>Row yuksekliklerini hep sabit veriyoruz icerik uzadi veya oyle bir tasarim geldiki columnlardan bir tanesi maximum 600px
+				minimum da 300px olmasi gerekiyor!</p>
+
+			<div class="baba baba-6">
+
+				<div class="cocuk">1</div>
+				<div class="cocuk">2 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+					dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
+					book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially
+					unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and
+					more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+				<div class="cocuk">3</div>
+				<div class="cocuk">4</div>
+
+			</div>
+
+			<p>Ekran daraldi ve cocuk 2 daha kuculemez durumda minmax() devreye girecek ve 1. cocuk minimumuna inecek!Goruldugu gibi
+				row da yazi nedeni ile autoya gecti!</p>
+
+			<details>
+
+				<summary>
+					<mark>Suan da yazilan <abbr title='Cascading Style Sheets'>CSS</abbr> icin <b>tikla!</b></mark>
+				</summary>
+
+				<div>
+					<span class="b">baba {</span>
+					<span class="b">
+								<span class="e t">display: </span><span class="p">grid;</span>
+					</span>
+					<span class="b">
+								<span class="e t">grid-template-columns: </span><span class="p">minmax(300px, 600px) 1fr;</span>
+					</span>
+					<span class="b">
+								<span class="e t">grid-auto-rows: </span><span class="p">minmax(100px, auto)</span>
+					</span>
+					<span class="b">
+								<span class="e t">grid-gap: </span><span class="p">20px;</span>
+					</span>
+					<span class="b">}</span>
+				</div>
+
+			</details>
+
+		</section>
+
+		<hr>
+
+		<section>
+
+			<h2>auto placement and order</h2>
+
+			<p>Simdi sen grid akisini artik row yapmak istemiyorsun.</p>
+
+			<div class="baba baba-7">
+
+				<div class="cocuk">1</div>
+				<div class="cocuk">2</div>
+				<div class="cocuk">3</div>
+				<div class="cocuk">4</div>
+				<div class="cocuk">5</div>
+				<div class="cocuk">6</div>
+				<div class="cocuk">7</div>
+
+			</div>
+
+			<p></p>
+
+			<details>
+
+				<summary>
+					<mark>Suan da yazilan <abbr title='Cascading Style Sheets'>CSS</abbr> icin <b>tikla!</b></mark>
+				</summary>
+
+				<div>
+					<span class="b">baba {</span>
+					<span class="b">
+								<span class="e t">display: </span><span class="p">grid;</span>
+					</span>
+					<span class="b">
+								<span class="e t">grid-template-columns: </span><span class="p">repeat(3, 1fr);</span>
+					</span>
+					<span class="b">
+								<span class="e t">grid-auto-flow: </span><span class="p">column;</span>
+					</span>
+					<span class="b">
+								<span class="e t">grid-gap: </span><span class="p">20px;</span>
+					</span>
+					<span class="b">}</span>
+				</div>
+
+			</details>
+
+			<p>Sen dedinki akis row olmasin column olsun.Ama row template belirtmedigin icin bu cocuklar tek row icerine dolustu!</p>
+
+			<h4>Baba buyuksun soyle kac row olalim? +baba 3</h4>
+
+			<div class="baba baba-8">
+
+				<div class="cocuk">1</div>
+				<div class="cocuk">2</div>
+				<div class="cocuk">3</div>
+				<div class="cocuk">4</div>
+				<div class="cocuk">5</div>
+				<div class="cocuk">6</div>
+				<div class="cocuk">7</div>
+
+			</div>
+
+			<p>Simdi template akisi column oldu ve 2 artik 1 in yaninda degil altinda.</p>
+
+			<details>
+
+				<summary>
+					<mark>Suan da yazilan <abbr title='Cascading Style Sheets'>CSS</abbr> icin <b>tikla!</b></mark>
+				</summary>
+
+				<div>
+					<span class="b">baba {</span>
+					<span class="b">
+								<span class="e t">display: </span><span class="p">grid;</span>
+					</span>
+					<span class="b">
+								<span class="e t">grid-template-columns: </span><span class="p">repeat(3, 1fr);</span>
+					</span>
+					<span class="b">
+								<span class="e t">grid-template-rows: </span><span class="p">repeat(3, 200px);</span>
+					</span>
+					<span class="b">
+								<span class="e t">grid-auto-flow: </span><span class="p">column;</span>
+					</span>
+					<span class="b">
+								<span class="e t">grid-gap: </span><span class="p">20px;</span>
+					</span>
+					<span class="b">}</span>
+				</div>
+
+			</details>
+
+			<h4>Order</h3>
+
+				<div class="baba baba-9">
+
+					<div class="cocuk">1</div>
+					<div class="cocuk span-2">2</div>
+					<div class="cocuk">3</div>
+					<div class="cocuk">4</div>
+					<div class="cocuk span-5">5</div>
+					<div class="cocuk">6</div>
+					<div class="cocuk">7</div>
+
+				</div>
+
+				<p>Default olarak hepsinin order'i 1'dir.2 ve 5 numarali cocuklara order degeri olarak 2 ve 3 verdim.</p>
+
+				<details>
+
+					<summary>
+						<mark>Suan da yazilan <abbr title='Cascading Style Sheets'>CSS</abbr> icin <b>tikla!</b></mark>
+					</summary>
+
+					<div>
+						<span class="b">baba span-2{</span>
+						<span class="b">
+								<span class="e t">order: </span><span class="p">2;</span>
+						</span>
+						<span class="b">}</span>
+						<span class="b">baba span-5{</span>
+						<span class="b">
+								<span class="e t">order: </span><span class="p">3;</span>
+						</span>
+						<span class="b">}</span>
+					</div>
+
+				</details>
+
+		</section>
+
+		<hr>
+
+		<section>
+
+			<h3>auto fill auto fit</h3>
+
+			<p>Oyle bir sey istedinki cocuklar 250px olsun babaya sigmayinca asagiya atsin ama asagi attiginda da diger cocuklarin toplami
+				baba kadar olsun.</p>
+
+			<p>Ya da cocuklarin genisligi 50px ancak babayi dolduracak yeteri kadar cocuk yok ama tam sigdirmak isitiyorsun.Cocuklar
+				sigmayinca duzgun sekilde asagi atmasini istiyorsun.</p>
+
+			<h4>auto fill</h4>
+
+			<div class="baba baba-10">
+
+				<div class="cocuk">1</div>
+				<div class="cocuk">2</div>
+				<div class="cocuk">3</div>
+				<div class="cocuk">4</div>
+				<div class="cocuk">5</div>
+				<div class="cocuk">6</div>
+				<div class="cocuk">7</div>
+
+			</div>
+
+			<p>Baba 1000px cocuklar ise 250px aralarda da 20px gap lar oldugu icin 250px * 3 + 40px = 790px</p>
+
+			<p>1000px -790px = 220px! Ne oldu cocuk sigmadi asagi atti.Bu 220px e cocuk sigmadi diye bos mu kalsin?</p>
+
+			<p>Koda bakarsaniz cocuklarin kac kere tekrar edecegini yazmadim.Dedim ki auto-fill yani genislik degerine gore sen kendin
+				ayarla.</p>
+
+			<p>Genislik olarakda minmax(250px, 1fr) dedim.Cocuklar babayi doldurmak icin 1fr oldu fazla gelincede fazla gelen asagi atti
+				ve yukarida kalan cocuklar tekrar kendilerini babaya sigdirmak icin kendi genisliklerini baba / yukarida kalan cocuklar
+				olarak guncelledi.</p>
+
+			<details>
+
+				<summary>
+					<mark>Suan da yazilan <abbr title='Cascading Style Sheets'>CSS</abbr> icin <b>tikla!</b></mark>
+				</summary>
+
+				<div>
+					<span class="b">baba {</span>
+					<span class="b">
+								<span class="e t">display: </span><span class="p">grid;</span>
+					</span>
+					<span class="b">
+								<span class="e t">grid-template-columns: </span><span class="p">repeat(auto-fill, minmax(250px, 1fr));</span>
+					</span>
+					<span class="b">
+								<span class="e t">grid-auto-row: </span><span class="p">200px;</span>
+					</span>
+					<span class="b">
+								<span class="e t">grid-gap: </span><span class="p">20px;</span>
+					</span>
+					<span class="b">}</span>
+				</div>
+
+			</details>
+
+			<h4>auto fit</h4>
+
+			<div class="baba baba-11">
+
+				<div class="cocuk">1</div>
+				<div class="cocuk">2</div>
+				<div class="cocuk">3</div>
+				<div class="cocuk">4</div>
+				<div class="cocuk">5</div>
+				<div class="cocuk">6</div>
+				<div class="cocuk">7</div>
+				<div class="cocuk">8</div>
+				<div class="cocuk">9</div>
+
+			</div>
+
+			<p>Cocuklar 720px 160px gap bize 860px bir genislik verdi.Ancak baba 1000px ve biz tam doldurmasini istiyoruz her zaman.</p>
+
+			<p>Baba diyelim 800px oldu bu seferde sigmayan cocuk asagiya insin kalan cocuklar yine babayi tam doldursunlar.</p>
+
+			<p><strong>Bu iki ornegide resize ederek daha iyi anlayabilirsiniz!</strong></p>
+
+			<details>
+
+				<summary>
+					<mark>Suan da yazilan <abbr title='Cascading Style Sheets'>CSS</abbr> icin <b>tikla!</b></mark>
+				</summary>
+
+				<div>
+					<span class="b">baba {</span>
+					<span class="b">
+								<span class="e t">display: </span><span class="p">grid;</span>
+					</span>
+					<span class="b">
+								<span class="e t">grid-template-columns: </span><span class="p">repeat(auto-fit, minmax(80px, 1fr));</span>
+					</span>
+					<span class="b">
+								<span class="e t">grid-auto-row: </span><span class="p">200px;</span>
+					</span>
+					<span class="b">
+								<span class="e t">grid-gap: </span><span class="p">20px;</span>
+					</span>
+					<span class="b">}</span>
+				</div>
+
+			</details>
+
+		</section>
+
+		<hr>
+
+		<section>
+
+			<h3>auto placement</h3>
+
+			<p>Asagidaki gibi bir yapiyla karsi karisiya kaldik ve cocuklarin kendilerini uygun yerlere yerlestirmesini istiyoruz.</p>
+
+			<div class="baba baba-12">
+
+				<div class="cocuk span-3">1</div>
+				<div class="cocuk">2</div>
+				<div class="cocuk">3</div>
+				<div class="cocuk span-2">4</div>
+				<div class="cocuk">5</div>
+				<div class="cocuk">6</div>
+				<div class="cocuk span-3">7</div>
+				<div class="cocuk">8</div>
+				<div class="cocuk">9</div>
+				<div class="cocuk span-3">10</div>
+				<div class="cocuk">11</div>
+				<div class="cocuk span-2">12</div>
+				<div class="cocuk">13</div>
+				<div class="cocuk">14</div>
+				<div class="cocuk span-2">15</div>
+				<div class="cocuk">16</div>
+				<div class="cocuk span-2">17</div>
+				<div class="cocuk span-3">18</div>
+				<div class="cocuk">19</div>
+				<div class="cocuk">20</div>
+				<div class="cocuk span-2">21</div>
+				<div class="cocuk span-3">22</div>
+				<div class="cocuk">23</div>
+				<div class="cocuk">24</div>
+				<div class="cocuk">25</div>
+				<div class="cocuk">26</div>
+				<div class="cocuk span-3">27</div>
+				<div class="cocuk">28</div>
+				<div class="cocuk span-2">29</div>
+				<div class="cocuk span-3">30</div>
+
+			</div>
+
+			<p></p>
+
+			<details>
+
+				<summary>
+					<mark>Suan da yazilan <abbr title='Cascading Style Sheets'>CSS</abbr> icin <b>tikla!</b></mark>
+				</summary>
+
+				<div>
+					<span class="b">baba {</span>
+					<span class="b">
+								<span class="e t">display: </span><span class="p">grid;</span>
+					</span>
+					<span class="b">
+								<span class="e t">grid-template-columns: </span><span class="p">repeat(auto-fill, minmax(150px, 1fr));</span>
+					</span>
+					<span class="b">
+								<span class="e t">grid-auto-row: </span><span class="p">minmax(150px, auto);</span>
+					</span>
+					<span class="b">
+								<span class="e t">grid-gap: </span><span class="p">2px;</span>
+					</span>
+					<span class="b">}</span>
+				</div>
+
+			</details>
+
+			<h4>grid-auto-flow: dense</h4>
+
+			<div class="baba baba-12 dense">
+
+				<div class="cocuk span-3">1</div>
+				<div class="cocuk">2</div>
+				<div class="cocuk">3</div>
+				<div class="cocuk span-2">4</div>
+				<div class="cocuk">5</div>
+				<div class="cocuk">6</div>
+				<div class="cocuk span-3">7</div>
+				<div class="cocuk">8</div>
+				<div class="cocuk">9</div>
+				<div class="cocuk span-3">10</div>
+				<div class="cocuk">11</div>
+				<div class="cocuk span-2">12</div>
+				<div class="cocuk">13</div>
+				<div class="cocuk">14</div>
+				<div class="cocuk span-2">15</div>
+				<div class="cocuk">16</div>
+				<div class="cocuk span-2">17</div>
+				<div class="cocuk span-3">18</div>
+				<div class="cocuk">19</div>
+				<div class="cocuk">20</div>
+				<div class="cocuk span-2">21</div>
+				<div class="cocuk span-3">22</div>
+				<div class="cocuk">23</div>
+				<div class="cocuk">24</div>
+				<div class="cocuk">25</div>
+				<div class="cocuk">26</div>
+				<div class="cocuk span-3">27</div>
+				<div class="cocuk">28</div>
+				<div class="cocuk span-2">29</div>
+				<div class="cocuk span-3">30</div>
+
+			</div>
+
+			<p></p>
+
+			<details>
+
+				<summary>
+					<mark>Suan da yazilan <abbr title='Cascading Style Sheets'>CSS</abbr> icin <b>tikla!</b></mark>
+				</summary>
+
+				<div>
+					<span class="b">baba {</span>
+					<span class="b">
+								<span class="e t">display: </span><span class="p">grid;</span>
+					</span>
+					<span class="b">
+								<span class="e t">grid-template-columns: </span><span class="p">repeat(auto-fill, minmax(150px, 1fr));</span>
+					</span>
+					<span class="b">
+								<span class="e t">grid-auto-row: </span><span class="p">minmax(150px, auto);</span>
+					</span>
+					<span class="b">
+								<span class="e t">grid-gap: </span><span class="p">2px;</span>
+					</span>
+					<span class="b">
+								<span class="e t">grid-auto-flow: </span><span class="p">dense;</span>
+					</span>
+					<span class="b">}</span>
+				</div>
+
+			</details>
+
+		</section>
+
+		<hr>
+
+		<section>
+
+			<h3>grid position</h3>
+
+			<ul>
+				<li>grid-column-start <strong>// kacinci column dan basliyayim?</strong></li>
+				<li>grid-column-end <strong>// kacinci column a kadar gideyim?</strong></li>
+				<li>grid-row-start <strong>// kacinci row dan basliyayim?</strong></li>
+				<li>grid-row-end <strong>// kacinci row a kadar gideyim?</strong></li>
+				<li>grid-column <strong>// kacinci column a gideyim?</strong></li>
+				<li>grid-row <strong>// kacinci row a gideyim?</strong></li>
+			</ul>
+
+			<p>Grid yapisindaki kolaylik ile bir cocuku istedigim yere kordinat vererek tasiyabilirim.Genisligini ve yuksekliginide babaya
+				verdigimiz grid row ve colum degerlerinden birim olarak alabiliriz.</p>
+
+			<h4>start, end</h4>
+
+			<div class="baba baba-13">
+
+				<div class="cocuk span-1">
+					1
+					<br>grid-column-start: 1;
+					<br>grid-colum-end: 4;
+				</div>
+				<div class="cocuk">2</div>
+				<div class="cocuk">3</div>
+				<div class="cocuk">4</div>
+				<div class="cocuk span-5">
+					5
+					<br>grid-row-start: 2;
+					<br>grid-row-end: 4;
+				</div>
+				<div class="cocuk">6</div>
+				<div class="cocuk">7</div>
+				<div class="cocuk">8</div>
+				<div class="cocuk">9</div>
+				<div class="cocuk">10</div>
+				<div class="cocuk">11</div>
+				<div class="cocuk">12</div>
+
+			</div>
+
+			<p><strong>Not : </strong> her cocuk default olarak column ve row da start 1 end 2 dir.</p>
+
+			<h4>column, row</h4>
+
+			<div class="baba baba-14">
+
+				<div class="cocuk span-1">
+					1
+					<br>grid-column: 6;
+					<br>grid-row: 2;
+				</div>
+				<div class="cocuk">2</div>
+				<div class="cocuk span-3">
+					3
+					<br>grid-column: span 3;
+				</div>
+				<div class="cocuk">4</div>
+				<div class="cocuk span-5">
+					5
+					<br>grid-column: 1;
+					<br>grid-row: 2;
+				</div>
+				<div class="cocuk">6</div>
+				<div class="cocuk">7</div>
+				<div class="cocuk">8</div>
+				<div class="cocuk">9</div>
+				<div class="cocuk">10</div>
+				<div class="cocuk span-11">
+					11
+					<br>grid-column: 1 / -1;
+				</div>
+				<div class="cocuk">12</div>
+
+			</div>
+
+		</section>
+
+		<hr>
+
+		<section>
+
+			<h3>named lines</h3>
+
+			<p></p>
+
+			<div class="baba baba-15">
+
+				<header class="cocuk">Header</header>
+
+				<article class="cocuk">Article</article>
+
+				<aside class="cocuk">Aside</aside>
+
+				<footer class="cocuk">Footer</footer>
+
+			</div>
+
+		</section>
+
+		<hr>
+
+	</main>
+
+	<footer class="container">
+
+		<a href="../blog.html">Diger Yazilar</a>
+
+	</footer>
+
+</body>
+
+</html>
