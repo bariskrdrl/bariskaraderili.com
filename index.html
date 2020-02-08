@@ -1,44 +1,8 @@
 <!DOCTYPE html>
 
-<html lang="tr">
+<html lang="tr" data-theme="light">
 
-  <head>
-
-    <meta charset="utf-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <meta name="description" content="Baris Karaderili Resmi Web Sitesi">
-
-    <meta name="keywords" content="baris, karaderili, baris karaderili, barisk, bariskrdrl, devbarisk">
-
-    <meta name="author" content="Baris Karaderili - info@bariskaraderili.com">
-
-    <title>Baris Karaderili</title>
-	  
-	<style>
-	
-		img { max-width: 100%; }
-		
-	</style> 
-
-    <!-- GoogleAnalytics Zimbirtisi -->
-
-    <script>
-
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-89492307-1', 'auto');
-      ga('send', 'pageview');
-
-    </script>
-
-  </head>
-
-  <body>
+<head>
 
 	<!--
 	  _                _       _                       _           _ _ _ 
@@ -47,55 +11,109 @@
 	 | |_) | (_| | |  | \__ \ |   < (_| | | | (_| | (_| |  __/ |  | | | |
 	 |_.__/ \__,_|_|  |_|___/ |_|\_\__,_|_|  \__,_|\__,_|\___|_|  |_|_|_|
 																		 
-	-->
-	
-    <header>
+  -->
 
-      <h1>baris karaderili</h1>
+	<meta charset="utf-8">
 
-    </header>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <main>
+	<meta name="description" content="Baris Karaderili Resmi Web Sitesi">
 
-      <section>
+	<meta name="keywords" content="baris, karaderili, baris karaderili, barisk, bariskrdrl, devbarisk">
 
-        <h2>Hello World!</h2><!-- Hakan Tezcan'a gelsin! -->
+	<meta name="author" content="Baris Karaderili - info@bariskaraderili.com">
 
-        <aside>
+	<title>Baris Karaderili</title>
 
-          <p>
+	<style>
+		:root {
+			--global-font-family: sans-serif;
+			--global-font-size: 16px;
+			--global-color: #000;
+			--global-background: #fff;
+		}
 
-            Adimi tekrar yazip ben buyum dememe gerek yok sanirim.
+		[data-theme="dark"] {
+			--global-color: #fff;
+			--global-background: #000;
+		}
 
-            Domain ve title da adimin yazdigi yetmiyormus gibi birde h1 etiketi icinde adimi yazdim.(Sanirim seo kasiyorum)
+		html {
+			font-family: var(--global-font-family);
+			font-size: var(--global-font-size);
+			color: var(--global-color);
+			background-color: var(--global-background);
+		}
 
-          </p>
+		img {
+			max-width: 100%;
+		}
+	</style>
 
-        </aside>
+</head>
 
-      </section>
+<body>
 
-      <section>
+	<label for="dark">
+		Dark Mode
+		<input type="checkbox" id="dark">
+	</label>
 
-        <h3>Asil Mesele</h3>
+	<header>
 
-        <p>
+		<h1>baris karaderili</h1>
 
-          Tum bu olanlar <time datetime="2007">2007</time> yilinda not defterinde table ile her bir sutunu sari kirmizi yaparak Gheorghe Hagi' nin hangi yil
+	</header>
 
-          hangi takimda oynayip kac gol attigini yazmamla basladi.Bir tanede profil resmi ekledim kime istersen uyarla sanirsin dinamizmi ben buldum.
+	<main>
 
-        </p>
+		<section>
 
-        <p>
+			<h2>Hello World!</h2><!-- Hakan Tezcan'a gelsin! -->
 
-          <time datetime="2007">2007 den 2015 e kadar</time> hatirladigim tam olarak atom da <abbr title="Hypertext Markup Language">html</abbr> yazip <kbd>enter</kbd> a bastigimda karsima cikan yapi ve marquee etiketidir.
+			<aside>
 
-        </p>
+				<p>
 
-        <h3>Yukaridaki bahsettigim yapi</h3>
+					Adimi tekrar yazip ben buyum dememe gerek yok sanirim.
 
-<pre>
+					Domain ve title da adimin yazdigi yetmiyormus gibi birde h1 etiketi icinde adimi yazdim.(Sanirim seo
+					kasiyorum)
+
+				</p>
+
+			</aside>
+
+		</section>
+
+		<section>
+
+			<h3>Asil Mesele</h3>
+
+			<p>
+
+				Tum bu olanlar <time datetime="2007">2007</time> yilinda not defterinde table ile her bir sutunu sari
+				kirmizi
+				yaparak Gheorghe Hagi' nin hangi yil
+
+				hangi takimda oynayip kac gol attigini yazmamla basladi.Bir tanede profil resmi ekledim kime istersen
+				uyarla
+				sanirsin dinamizmi ben buldum.
+
+			</p>
+
+			<p>
+
+				<time datetime="2007">2007 den 2015 e kadar</time> hatirladigim tam olarak atom da <abbr
+					title="Hypertext Markup Language">html</abbr> yazip <kbd>enter</kbd> a bastigimda karsima cikan yapi
+				ve
+				marquee etiketidir.
+
+			</p>
+
+			<h3>Yukaridaki bahsettigim yapi</h3>
+
+			<pre>
 <code>
 <span>&lt;</span>!DOCTYPE html> // Bu kisim haric
 <span>&lt;</span>html>
@@ -111,364 +129,419 @@
 </code>
 </pre>
 
-        <p>
+			<p>
 
-          <time datetime="2015">2015</time> yilinda hayalim olan meslegi yapmak icin mevcut olan isimi biraktim ve
-          hergun bir deli dana gibi ne bulursam calistim.
-          (C, C++, C#, <abbr title="PHP: Hypertext Preprocessor">php</abbr>, phyton, javascript, <abbr title="Hypertext Markup Language">html</abbr>, <abbr title="Cascading Style Sheets">css</abbr>, illustrator, photoshop, indesign).
+				<time datetime="2015">2015</time> yilinda hayalim olan meslegi yapmak icin mevcut olan isimi biraktim ve
+				hergun bir deli dana gibi ne bulursam calistim.
+				(C, C++, C#, <abbr title="PHP: Hypertext Preprocessor">php</abbr>, phyton, javascript, <abbr
+					title="Hypertext Markup Language">html</abbr>, <abbr title="Cascading Style Sheets">css</abbr>,
+				illustrator,
+				photoshop, indesign).
 
-        </p>
+			</p>
 
-      </section>
+		</section>
 
-      <section>
+		<section>
 
-        <h4>Yurumeden kosmaya calisiyorsun!</h4><!-- Ali Kemal Civelek -->
+			<h4>Yurumeden kosmaya calisiyorsun!</h4><!-- Ali Kemal Civelek -->
 
-        <p>
+			<p>
 
-          <b>Sonuc:</b> Akil danisacak birini bulduktan sonra tek bir bransa yonelmem gerektigini anladim ve <abbr title="Hypertext Markup Language">html</abbr>, <abbr title="Cascading Style Sheets">css</abbr>, javascript ogrenmeye karar verdim.
+				<b>Sonuc:</b> Akil danisacak birini bulduktan sonra tek bir bransa yonelmem gerektigini anladim ve <abbr
+					title="Hypertext Markup Language">html</abbr>, <abbr title="Cascading Style Sheets">css</abbr>,
+				javascript
+				ogrenmeye karar verdim.
 
-          Ilk firsatda w3schools ilk ogretim okuluna kaydimi yaptirdim.Sonra baska okullar baska okullar anladimki bu okullar bitmeyecek.Tam da istedigim sey buydu
+				Ilk firsatda w3schools ilk ogretim okuluna kaydimi yaptirdim.Sonra baska okullar baska okullar anladimki
+				bu
+				okullar bitmeyecek.Tam da istedigim sey buydu
 
-          aslinda <strong>bitmeyen bir okul.</strong>
+				aslinda <strong>bitmeyen bir okul.</strong>
 
-        </p>
+			</p>
 
-      </section>
+		</section>
 
-      <section>
+		<section>
 
-        <h4>Sevdiklerim</h4>
+			<h4>Sevdiklerim</h4>
 
-        <ins>
+			<ins>
 
-          <ul>
+				<ul>
 
-            <li>
+					<li>
 
-              <details open>
+						<details open>
 
-                <summary>Firefox</summary>
+							<summary>Firefox</summary>
 
-                <img src="images/likes/firefox.png" alt="mozilla-firefox web browser">
+							<img src="images/likes/firefox.png" alt="mozilla-firefox web browser">
 
-              </details>
+						</details>
 
-            </li>
+					</li>
 
-            <li>
+					<li>
 
-              <details>
+						<details>
 
-                <summary>W3schools</summary>
+							<summary>W3schools</summary>
 
-                <img src="images/likes/w3schools.png" alt="w3scools">
+							<img src="images/likes/w3schools.png" alt="w3scools">
 
-              </details>
+						</details>
 
-            </li>
+					</li>
 
-            <li>
+					<li>
 
-              <details>
+						<details>
 
-                <summary>Uikit(okundugu gibi)</summary>
+							<summary>Uikit(okundugu gibi)</summary>
 
-                <img src="images/likes/uikit.png" alt="get uikit css framework">
+							<img src="images/likes/uikit.png" alt="get uikit css framework">
 
-              </details>
+						</details>
 
-            </li>
+					</li>
 
-            <li>
+					<li>
 
-              <details>
+						<details>
 
-                <summary>Atom</summary>
+							<summary>Atom</summary>
 
-                <img src="images/likes/atom.png" alt="atom editor">
+							<img src="images/likes/atom.png" alt="atom editor">
 
-              </details>
+						</details>
 
-            </li>
+					</li>
 
-            <li>
+					<li>
 
-              <details>
+						<details>
 
-                <summary>Patlicanli her tur yemek</summary>
+							<summary>Patlicanli her tur yemek</summary>
 
-                <img src="images/likes/patlican.png" alt="patlican">
+							<img src="images/likes/patlican.png" alt="patlican">
 
-              </details>
+						</details>
 
-            </li>
+					</li>
 
-            <li>
+					<li>
 
-              <details>
+						<details>
 
-                <summary>Corum/Sungurlu/Karaoglu Koyu</summary>
+							<summary>Corum/Sungurlu/Karaoglu Koyu</summary>
 
-                <img src="images/likes/karaoglu-koyu.jpg" alt="karaoglu koyu">
+							<img src="images/likes/karaoglu-koyu.jpg" alt="karaoglu koyu">
 
-              </details>
+						</details>
 
-            </li>
+					</li>
 
-            <li>
+					<li>
 
-              <details>
+						<details>
 
-                <summary>Corumspor</summary>
+							<summary>Corumspor</summary>
 
-                <img src="images/likes/corumspor.png" alt="corumspor">
+							<img src="images/likes/corumspor.png" alt="corumspor">
 
-              </details>
+						</details>
 
-            </li>
+					</li>
 
-            <li>
+					<li>
 
-              <details>
+						<details>
 
-                <summary>Colombia(columbia degil)</summary>
+							<summary>Colombia(columbia degil)</summary>
 
-                <img src="images/likes/colombia.png" alt="colombia">
+							<img src="images/likes/colombia.png" alt="colombia">
 
-              </details>
+						</details>
 
-            </li>
+					</li>
 
-            <li>
+					<li>
 
-              <details>
+						<details>
 
-                <summary>Trt-1 pazar sabah 10:00</summary>
+							<summary>Trt-1 pazar sabah 10:00</summary>
 
-                <img src="images/likes/trt-1.jpg" alt="trt-1 kovboy filmleri (hey amigo ce sabata)">
+							<img src="images/likes/trt-1.jpg" alt="trt-1 kovboy filmleri (hey amigo ce sabata)">
 
-              </details>
+						</details>
 
-            </li>
+					</li>
 
-            <li>
+					<li>
 
-              <details>
+						<details>
 
-                <summary>SoundCloud</summary>
+							<summary>SoundCloud</summary>
 
-                <img src="images/likes/soundcloud.png" alt="soundcloud">
+							<img src="images/likes/soundcloud.png" alt="soundcloud">
 
-              </details>
+						</details>
 
-            </li>
+					</li>
 
-            <li>
+					<li>
 
-              <details>
+						<details>
 
-                <summary>Charlie Chaplin</summary>
+							<summary>Charlie Chaplin</summary>
 
-                <img src="images/likes/charlie-chaplin.jpg" alt="Charlie Chaplin">
+							<img src="images/likes/charlie-chaplin.jpg" alt="Charlie Chaplin">
 
-              </details>
+						</details>
 
-            </li>
+					</li>
 
-            <li>
+					<li>
 
-              <details>
+						<details>
 
-                <summary>
+							<summary>
 
-                  <ruby>
+								<ruby>
 
-                    惡の華 <rt>Aku No Hana</rt>
+									惡の華 <rt>Aku No Hana</rt>
 
-                  </ruby>
+								</ruby>
 
-                </summary>
+							</summary>
 
-                <img src="images/likes/aku-no-hana.jpg" alt="aku no hana(惡の華) - acti cicek acti">
+							<img src="images/likes/aku-no-hana.jpg" alt="aku no hana(惡の華) - acti cicek acti">
 
-              </details>
+						</details>
 
-            </li>
+					</li>
 
-            <li>
+					<li>
 
-              <details>
+						<details>
 
-                <summary>
+							<summary>
 
-                  <ruby>
+								<ruby>
 
-                    四月は君の嘘 <rt>Shigatsu wa Kimi no Uso</rt>
+									四月は君の嘘 <rt>Shigatsu wa Kimi no Uso</rt>
 
-                  </ruby>
+								</ruby>
 
-                </summary>
+							</summary>
 
-                <img src="images/likes/shigatsu-wa-kimi-no-uso.jpg" alt="Shigatsu wa Kimi no Uso(四月は君の嘘) - birer birer kayboluyor anilar">
+							<img src="images/likes/shigatsu-wa-kimi-no-uso.jpg"
+								alt="Shigatsu wa Kimi no Uso(四月は君の嘘) - birer birer kayboluyor anilar">
 
-              </details>
+						</details>
 
-            </li>
+					</li>
 
-          </ul>
+				</ul>
 
-        </ins>
+			</ins>
 
-      </section>
+		</section>
 
-      <section>
+		<section>
 
-        <h4>Sevmediklerim</h4>
+			<h4>Sevmediklerim</h4>
 
-        <ins>
+			<ins>
 
-          <ul>
+				<ul>
 
-            <li>Firefox disindaki tarayicilar</li>
+					<li>Firefox disindaki tarayicilar</li>
 
-            <li>Taze fasulye yemegi</li>
+					<li>Taze fasulye yemegi</li>
 
-            <li>Pop muzik</li>
+					<li>Pop muzik</li>
 
-            <li>Kulaklik olmadan calismak</li>
+					<li>Kulaklik olmadan calismak</li>
 
-            <li>Wordpress</li>
+					<li>Wordpress</li>
 
-            <li>Makarna(duduk makarnadan bahsetmiyorum)</li>
+					<li>Makarna(duduk makarnadan bahsetmiyorum)</li>
 
-          </ul>
+				</ul>
 
-        </ins>
+			</ins>
 
-      </section>
+		</section>
 
-      <section>
+		<section>
 
-        <h4>Vakit gecirdigim yerler</h4>
+			<h4>Vakit gecirdigim yerler</h4>
 
-        <ol>
+			<ol>
 
-          <li><del>TSK - Deniz Astsubayi</del></li>
+				<li><del>TSK - Deniz Astsubayi</del></li>
 
-          <li><del>Stores Dis Ticaret - Arayuz Kodlama</del></li>
+				<li><del>Stores Dis Ticaret - Arayuz Kodlama</del></li>
 
-          <li><s>Mediaclick Web Tasarim Ajansi - Arayuz Kodlama</s></li>
+				<li><s>Mediaclick Web Tasarim Ajansi - Arayuz Kodlama</s></li>
 
-          <li><del>Taximpro Creative Media - Arayuz Kodlama</del></li>
+				<li><del>Taximpro Creative Media - Arayuz Kodlama</del></li>
 
-          <li><s>Proj-e Yazilim - Arayuz Kodlama(devam)</s></li>
+				<li><s>Proj-e Yazilim - Arayuz Kodlama(devam)</s></li>
 
-          <li>Clockwork Dijital Ajans</li>
+				<li>Clockwork Dijital Ajans</li>
 
-        </ol>
+			</ol>
 
-      </section>
+		</section>
 
-      <section>
+		<section>
 
-        <h4>Bilgi ve Fikir Sahibi Olduklarim</h4>
+			<h4>Bilgi ve Fikir Sahibi Olduklarim</h4>
 
-        <p>HTML, HTML2, HTML3.2, HTML4.01, HTML5, CSS, CSS2, CSS3<strong>(Dunyayi kurtaran adamin oglu!)</strong></p>
+			<p>HTML, HTML2, HTML3.2, HTML4.01, HTML5, CSS, CSS2, CSS3<strong>(Dunyayi kurtaran adamin oglu!)</strong>
+			</p>
 
-        <p>HTML, CSS, XHTML, jQuery, Sass, Jade(Pugjs), Bower, Gruntjs, Git, Bootstrap, UIkit</p>
+			<p>HTML, CSS, XHTML, jQuery, Sass, Jade(Pugjs), Bower, Gruntjs, Git, Bootstrap, UIkit</p>
 
-      </section>
+		</section>
 
-      <section>
+		<section>
 
-        <h4>Yetkinliklerim(Yuzde yuzleri cakayimda alem front end gorsun!)</h4>
+			<h4>Yetkinliklerim(Yuzde yuzleri cakayimda alem front end gorsun!)</h4>
 
-        <dl>
+			<dl>
 
-          <dt>HTML 100%</dt>
+				<dt>HTML 100%</dt>
 
-          <dd><meter value="100" min="0" max="100"></meter></dd>
+				<dd><meter value="100" min="0" max="100"></meter></dd>
 
-          <dt>CSS 100%</dt>
+				<dt>CSS 100%</dt>
 
-          <dd><meter value="100" min="0" max="100"></meter></dd>
+				<dd><meter value="100" min="0" max="100"></meter></dd>
 
-          <dt>Javascript 100%</dt>
+				<dt>Javascript 100%</dt>
 
-          <dd><meter value="100" min="0" max="100"></meter></dd>
+				<dd><meter value="100" min="0" max="100"></meter></dd>
 
-          <dt>XHTML 100%</dt>
+				<dt>XHTML 100%</dt>
 
-          <dd><meter value="100" min="0" max="100"></meter></dd>
+				<dd><meter value="100" min="0" max="100"></meter></dd>
 
-          <dt>W3 Standart 100%</dt>
+				<dt>W3 Standart 100%</dt>
 
-          <dd><meter value="100" min="0" max="100"></meter></dd>
+				<dd><meter value="100" min="0" max="100"></meter></dd>
 
-          <dt>Semantic 100%</dt>
+				<dt>Semantic 100%</dt>
 
-          <dd><meter value="100" min="0" max="100"></meter></dd>
+				<dd><meter value="100" min="0" max="100"></meter></dd>
 
-          <dt>Dinamizm 100%</dt>
+				<dt>Dinamizm 100%</dt>
 
-          <dd><meter value="100" min="0" max="100"></meter></dd>
+				<dd><meter value="100" min="0" max="100"></meter></dd>
 
-        </dl>
+			</dl>
 
-      </section>
+		</section>
 
-      <section>
+		<section>
 
-        <h4>Permatikler bile flex teknolojisi kullaniyor(Dedemin yuzune pek uyumlu oldugunu sanmiyorum.)</h4>
+			<h4>Permatikler bile flex teknolojisi kullaniyor(Dedemin yuzune pek uyumlu oldugunu sanmiyorum.)</h4>
 
-        <a href="flex-box/index.html">
+			<a href="flex-box/index.html">
 
-          <img src="images/flex-box/flex-gillette.gif" alt="kullan artik bu onu (flex)" />
+				<img src="images/flex-box/flex-gillette.gif" alt="kullan artik bu onu (flex)" />
 
-          <br />
+				<br />
 
-          <mark>Kullan artik bu onu!</mark>
+				<mark>Kullan artik onu!</mark>
 
-        </a>
+			</a>
 
-      </section>
+		</section>
 
-      <section>
+		<section>
 
-        <h4><em>Huzur</em></h4>
+			<h4><em>Huzur</em></h4>
 
-        <blockquote cite="http://wwww.bariskaraderili.com">
+			<blockquote cite="http://wwww.bariskaraderili.com">
 
-          "Hayatta her zaman f5 atip tasarimin aynisini gordugundeki huzura sahip olamazsin."<br/>
+				"Hayatta her zaman f5 atip tasarimin aynisini gordugundeki huzura sahip olamazsin."<br />
 
-          - Kendim
+				- Kendim
 
-        </blockquote>
+			</blockquote>
 
-      </section>
+		</section>
 
-    </main>
+	</main>
 
-    <hr />
+	<hr />
 
-    <footer>
+	<footer>
 
-      <small>&copy; Copyright 2016 Tüm haklarim saklidir.</small>
+		<small>&copy; Copyright 2016 Tüm haklarim saklidir.</small>
 
-      <a href="https://twitter.com/devbarisk" target="_blank">@devbarisk - </a>
+		<a href="https://twitter.com/devbarisk" target="_blank">@devbarisk - </a>
 
-      <a href="https://tr.linkedin.com/in/baris-karaderili-b469b2114" target="_blank">Linkedin - </a>
+		<a href="https://tr.linkedin.com/in/baris-karaderili-b469b2114" target="_blank">Linkedin - </a>
 
-      <a href="https://codepen.io/bariskaraderili/" target="_blank">Codepen - </a>
+		<a href="https://codepen.io/bariskaraderili/" target="_blank">Codepen - </a>
 
-      <a href="https://soundcloud.com/bar-karaderili" target="_blank">Soundcloud - </a>
+		<a href="https://soundcloud.com/bar-karaderili" target="_blank">Soundcloud - </a>
 
-      <a href="blog.html">Blog</a>
+		<a href="blog.html">Blog</a>
 
-    </footer>
+	</footer>
 
-  </body>
+
+	<!-- GoogleAnalytics Zimbirtisi -->
+
+	<script>
+		(function (i, s, o, g, r, a, m) {
+			i['GoogleAnalyticsObject'] = r;
+			i[r] = i[r] || function () {
+				(i[r].q = i[r].q || []).push(arguments)
+			}, i[r].l = 1 * new Date();
+			a = s.createElement(o),
+				m = s.getElementsByTagName(o)[0];
+			a.async = 1;
+			a.src = g;
+			m.parentNode.insertBefore(a, m)
+		})(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+		ga('create', 'UA-89492307-1', 'auto');
+		ga('send', 'pageview');
+	</script>
+
+	<script>
+		const toggleSwitch = document.querySelector('#dark');
+		const currentTheme = localStorage.getItem('theme');
+
+		if (currentTheme) {
+			document.documentElement.setAttribute('data-theme', currentTheme);
+
+			if (currentTheme === 'dark') {
+				toggleSwitch.checked = true;
+			}
+		}
+
+		function switchTheme(e) {
+			if (e.target.checked) {
+				document.documentElement.setAttribute('data-theme', 'dark');
+				localStorage.setItem('theme', 'dark');
+			} else {
+				document.documentElement.setAttribute('data-theme', 'light');
+				localStorage.setItem('theme', 'light');
+			}
+		}
+
+		toggleSwitch.addEventListener('change', switchTheme, false);
+	</script>
+
+</body>
 
 </html>
