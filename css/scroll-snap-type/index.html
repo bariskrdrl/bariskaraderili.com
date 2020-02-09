@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+
+<html lang="tr">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="Baris Karaderili Resmi Web Sitesi">
+
+    <meta name="keywords" content="baris, karaderili, baris karaderili, barisk, bariskrdrl, devbarisk">
+
+    <meta name="author" content="Baris Karaderili - info@bariskaraderili.com">
+
+    <title>Baris Karaderili - Scroll Snap Type</title>
+
+    <style>
+        html {
+            font-family: sans-serif;
+        }
+
+        .e {
+            color: royalblue;
+        }
+
+        .p {
+            color: darkred;
+        }
+
+        .b {
+            display: block;
+        }
+
+        .t {
+            padding-left: 20px;
+        }
+
+        .grid {
+            margin-left: -30px;
+            display: flex;
+            flex-wrap: nowrap;
+            overflow-x: scroll;
+            scroll-snap-type: x mandatory;
+            scrollbar-width: 0;
+        }
+
+        .grid::-webkit-scrollbar {
+            width: 0;
+        }
+
+        .grid>* {
+            padding-left: 30px;
+            box-sizing: border-box;
+            margin-bottom: 30px;
+            width: 90%;
+            flex: none;
+            scroll-snap-align: start;
+        }
+
+        .item {
+            font-size: 24px;
+            font-weight: bold;
+            background-color: aqua;
+            padding: 30px;
+            min-height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @media (min-width: 960px) {
+            .grid {
+                flex-wrap: wrap;
+                overflow-x: unset;
+                scroll-snap-type: none;
+            }
+
+            .grid>* {
+                width: 25%;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <h1>Scroll Snap Type</h1>
+    </header>
+
+    <main>
+
+        <section>
+
+            <p>Cok sik rastladigim bir olaydan bahsetmek istiyorum. Tasarimlarda surekli card yapilarla karsilasiyorum.
+                Mobilde ise bu yapilar slide seklinde gosteriliyor.</p>
+
+            <p>Bunun icin farkli iki yapi hazirlamak yerine mobil icin bir slider ekleyerek min-width ile slider
+                yapisini css ile eziyordum. Daha farkli bir cozum var ise bana mail atabilirsiniz. <a
+                    href="mailto:karaderili.baris@gmail.com">karaderili.baris@gmail.com</a></p>
+
+            <p>Uzun zamandir varligindan haberdar oldugum fakat kullanmadigim bir css ozelligini son yaptigim iste
+                kullanma firsati buldum.</p>
+
+            <p><span class="e">scroll-snap-type:</span> aldigi ozellikler soyle</p>
+
+            <span class="e">scroll-snap-type: <span class="p">none;</span></span><br>
+            <span class="e">scroll-snap-type: <span class="p">x;</span></span><br>
+            <span class="e">scroll-snap-type: <span class="p">y;</span></span><br>
+            <span class="e">scroll-snap-type: <span class="p">block;</span></span><br>
+            <span class="e">scroll-snap-type: <span class="p">inline;</span></span><br>
+            <span class="e">scroll-snap-type: <span class="p">both;</span></span><br>
+            <span class="e">scroll-snap-type: <span class="p">x mandatory;</span></span><br>
+            <span class="e">scroll-snap-type: <span class="p">y proximity;</span></span><br>
+            <span class="e">scroll-snap-type: <span class="p">both mandatory;</span></span><br>
+
+        </section>
+
+        <section>
+
+            <p>Yapimiz bu sekilde olsun. Mobilde de bunlar slide edilebilir sekilde tasarlanmis.</p>
+
+            <p>Ya gidip bir slider kutuphanesi ekliyecegim onu desktop icin css ozelliklerini ezerek ayni goruntuyu
+                olusturacagim ya da iki tane yapi olusturarak ekrana gore gizle goster yapacagim.</p>
+
+            <p>Ama <span class="e">scroll-snap-type</span> ozelligi ile bunu tek yapi olusturarak ve javascript
+                kullanmadan olusturabiliriz.</p>
+
+            <div class="grid">
+                <div>
+                    <div class="item">
+                        1
+                    </div>
+                </div>
+
+                <div>
+                    <div class="item">
+                        2
+                    </div>
+                </div>
+
+                <div>
+                    <div class="item">
+                        3
+                    </div>
+                </div>
+
+                <div>
+                    <div class="item">
+                        4
+                    </div>
+                </div>
+
+                <div>
+                    <div class="item">
+                        5
+                    </div>
+                </div>
+
+                <div>
+                    <div class="item">
+                        6
+                    </div>
+                </div>
+
+                <div>
+                    <div class="item">
+                        7
+                    </div>
+                </div>
+
+                <div>
+                    <div class="item">
+                        8
+                    </div>
+                </div>
+            </div>
+
+            <p>Ornegi denemek icin mobil moda gecis yapabilirsiniz.</p>
+
+            <details>
+
+                <summary>
+                    <mark>Suan da yazilan <abbr title='Cascading Style Sheets'>CSS</abbr> icin <b>tikla!</b></mark>
+                </summary>
+
+                <div>
+                    <code>
+                        <pre>
+                            .grid {
+                                margin-left: -30px;
+                                display: flex;
+                                flex-wrap: nowrap;
+                                overflow-x: scroll;
+                                scroll-snap-type: x mandatory;
+                                scrollbar-width: 0;
+                            }
+                    
+                            .grid::-webkit-scrollbar {
+                                width: 0;
+                            }
+                    
+                            .grid > * {
+                                padding-left: 30px;
+                                box-sizing: border-box;
+                                margin-bottom: 30px;
+                                width: 90%;
+                                flex: none;
+                                scroll-snap-align: start;
+                            }
+                    
+                            .item {
+                                font-size: 24px;
+                                font-weight: bold;
+                                background-color: aqua;
+                                padding: 30px;
+                                min-height: 200px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                            }
+                    
+                            @media (min-width: 960px) {
+                                .grid {
+                                    flex-wrap: wrap;
+                                    overflow-x: unset;
+                                    scroll-snap-type: none;
+                                }
+                    
+                                .grid > * {
+                                    width: 25%;
+                                }
+                            }
+                        </pre>
+                    </code>
+                </div>
+
+            </details>
+
+            <p><b>Not:</b> Bu yontem her zaman isinize yaramayabilir. Suan da bu yontem icin bir dotnav ozelligi yok.
+                Tasariminiz dotnav vb slide uzunlugunu gosteren yapilar bulunduruyorsa bunu kullanmaniz sizin icin
+                sikintilar cikartabilir.</p>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <h3><strong>Css le kalin :)</strong></h3>
+
+        <a href="../../blog.html">Diger Yazilar</a>
+
+    </footer>
+
+</body>
+
+</html>
