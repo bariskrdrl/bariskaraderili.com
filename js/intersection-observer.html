@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<html lang="tr">
+
+	<head>
+
+		<meta charset="utf-8">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<meta name="description" content="Baris Karaderili Resmi Web Sitesi">
+
+		<meta name="keywords" content="baris, karaderili, baris karaderili, barisk, bariskrdrl, devbarisk">
+
+		<meta name="author" content="Baris Karaderili - info@bariskaraderili.com">
+
+		<title>Baris Karaderili - Intersection Observer</title>
+
+		<style media="screen">
+
+			html { font-family: 'Tahoma'; }
+
+			.e { color: royalblue; }
+
+			.p { color: darkred; }
+
+			.b { display: block; }
+
+			.t { padding-left: 20px; }
+
+            section {
+                min-height: 100vh;
+            }
+
+            .grid {
+                display: grid;
+                gap: 30px;
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            .grid > * {
+                background-color: aquamarine;
+                opacity: 0;
+                min-height: 300px;
+                transition: all .3s ease-in-out;
+                transform: translateX(-50%);
+            }
+
+            .grid > *:nth-child(2) {
+                transition-delay: .1s;
+            }
+
+            .grid > *:nth-child(3) {
+                transition-delay: .2s;
+            }
+
+            .grid > *:nth-child(4) {
+                transition-delay: .3s;
+            }
+
+            .inverse .grid > * {
+                opacity: 1;
+                transform: translateX(0%);
+            }
+
+		</style>
+
+	</head>
+
+	<body>
+
+		<header>
+
+			<h1>Intersection Observer</h1>
+
+		</header>
+
+		<main>
+
+            
+
+			<section class="section section1">
+
+                <div class="grid">
+                    <div>1</div>
+                    <div>2</div>
+                    <div>3</div>
+                    <div>4</div>
+                </div>
+
+            </section>
+            
+            <section class="section section2">
+
+                <div class="grid">
+                    <div>1</div>
+                    <div>2</div>
+                    <div>3</div>
+                    <div>4</div>
+                </div>
+
+            </section>
+            
+            <section class="section section3">
+
+                <div class="grid">
+                    <div>1</div>
+                    <div>2</div>
+                    <div>3</div>
+                    <div>4</div>
+                </div>
+
+			</section>
+
+		</main>
+
+		<footer>
+
+			<h3><strong>Js le kalin :)</strong></h3>
+
+			<a href="../../blog.html">Diger Yazilar</a>
+
+        </footer>
+        
+        <script>
+            const sectionOne = document.querySelector('.section1');
+            const sections = document.querySelectorAll('.section');
+
+            const options = {
+                root: null,
+                threshold: .5,
+                //rootMargin: '100px'
+            };
+
+            const observer = new IntersectionObserver((entires, observer) => {
+                entires.forEach(entry => {
+                    if (!entry.isIntersecting) {
+                        return;
+                    }
+                    console.log(entry.target);
+
+                    entry.target.classList.toggle('inverse');
+
+                    observer.unobserve(entry.target);
+
+                });
+            }, options);
+
+            sections.forEach(section => {
+                observer.observe(section);    
+            });
+        </script>
+
+	</body>
+
+</html>
